@@ -5,8 +5,14 @@ html {
 }
 
 #notice_fx {
-  background-color: #f77353;
+  color: #c7c79b;
+  background-color: #dc533c;
 }
+
+#notice_fx a {
+  color: #e0e049;
+}
+
 
 #close_notice_fx {
   color: #333;

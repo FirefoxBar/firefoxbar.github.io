@@ -1,4 +1,4 @@
-@charset "utf-8";
+ï»¿@charset "utf-8";
 
 /* FirefoxBar CSS */
 
@@ -28,12 +28,13 @@ ol, ul {
 }
 
 html, input, textarea, button {
-  font-family: "Microsoft YaHei", "STHeitiSC", "ÎÄÈªæäÕýºÚ", sans-serif;
+  font-family: "Microsoft YaHei", "STHeitiSC", "æ–‡æ³‰é©¿æ­£é»‘", sans-serif;
 }
 
 html, body {
   margin: 0;
   padding: 0;
+  min-width: 960px;
 }
 
 a {
@@ -45,6 +46,7 @@ a {
   padding: 10px;
   line-height: 20px;
   font-size: 18px;
+  font-weight: bold;
 }
 
 #close_notice_fx {
@@ -79,7 +81,7 @@ header nav ul {
 
 header nav ul li {
   float: left;
-  padding: 10px 10px 10px 42px;
+  padding: 10px 20px;
   height: 30px;
   line-height: 30px;
   font-size: 20px;

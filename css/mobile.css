@@ -1,0 +1,46 @@
+﻿@charset "utf-8";
+
+@media only screen and (max-device-width: 320px) {
+  html, body {
+    min-width: 320px;
+  }
+
+  #notice_fx {
+    display: none;
+    font-size: 12px;
+  }
+
+  header {
+    padding: 10px;
+    height: 108px;
+  }
+
+  #logo {
+    width: 64px;
+    height: 64px;
+    margin: 0 -64px 0 0;
+  }
+
+  header h1 {
+    float: none;
+    line-height: 44px;
+    font-size: 22px;
+    padding: 10px 10px 10px 74px;
+    margin: 0 10px;
+    text-align: right;
+  }
+
+  header nav {
+    height: 30px;
+  }
+
+  header nav ul {
+    height: 30px;
+  }
+
+ header nav ul li {
+   font-size: 16px;
+   line-height: 22px;
+   padding: 2px 4px;
+ }
+}
