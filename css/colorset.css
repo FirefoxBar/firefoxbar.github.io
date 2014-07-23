@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+
+html {
+  background: #f0f0f0;
+}
+
+#notice_fx {
+  background-color: #f77353;
+}
+
+#close_notice_fx {
+  color: #333;
+}
+
+header {
+  background-color: #5e8ab1;
+}
+
+header h1 {
+  color: #222;
+}
+
+header nav ul li a {
+  color: #fff;
+}

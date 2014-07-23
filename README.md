@@ -1,2 +1,0 @@
-firefoxbar.github.io
-====================
