@@ -16,7 +16,7 @@ function header() {
   var items = [
     {'location': 'userscript', 'description': '用户脚本'},
     {'location': 'userstyle', 'description': '用户样式'},
-    {'location': 'userchrome', 'description': '用户界面'},
+    {'location': 'userchrome', 'description': 'UC脚本'},
     {'location': 'addon', 'description': '附加组件'},
   ];
   document.writeln('<header>' +
