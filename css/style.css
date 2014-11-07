@@ -93,14 +93,14 @@ a{
 	cursor: pointer;
 	text-indent: 20px;
 }
-#nav li.cu{
+#nav li:target{
 	box-shadow: 4px 0 0 0 #ff9500 inset;
 	background-color: #343f48;
 }
-#nav li.cu:nth-child(2n){
+#nav li:target:nth-child(2n){
 	box-shadow: 4px 0 0 0 #c43d28 inset;
 }
-#nav li.cu a{
+#nav li:target a{
 	color: #ffffff;
 }
 #nav li:hover{
@@ -114,7 +114,8 @@ a{
 #main{
 	font-size: 15px;
 	line-height: 2;
-	padding: 50px 50px 0 350px
+	padding: 50px 50px 0 350px;
+  display: block;
 }
 #main h2{
 	border-bottom: 1px solid #e2e2e2;
