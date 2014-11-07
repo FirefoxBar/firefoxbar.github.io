@@ -28,7 +28,7 @@
 	},
 	{
 		"name":"Tieba Lzl Dialogue",
-		"version":"0.4",		
+		"version":"0.5",		
 		"install":"https://github.com/FirefoxBar/userscript/raw/master/Tieba_Lzl_Dialogue/Tieba_Lzl_Dialogue.user.js",
 		"link":"https://github.com/FirefoxBar/userscript/raw/master/Tieba_Lzl_Dialogue",
 		"describe":"贴吧楼中楼弹出框查看回复。"
