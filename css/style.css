@@ -1,198 +1,248 @@
-html{
-	color:#000;
-	background:#FFF;
-    font-family: STHeiti,"Microsoft Yahei",Helmet,Freesans,Arial,sans-serif;
-    font-size: 14px;
-    min-height: 100%;	
-    min-width: 640px;
+html {
+  color: #000;
+  background: #FFF;
+  font-family: STHeiti,"Microsoft Yahei",Helmet,Freesans,Arial,sans-serif;
+  font-size: 14px;
+  min-height: 100%;
+  min-width: 640px;
 }
-body{
-	height: 100%;
-}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
-	margin:0;
-	padding:0;
-}
-table{
-	border-collapse:collapse;
-	border-spacing:0;
-}
-fieldset,img{
-	border:0;
-}
-address,caption,cite,code,dfn,em,strong,th,var{
-	font-style:normal;
-	font-weight:normal;
-}
-ol,ul{
-	list-style:none;
-}
-caption,th{
-	text-align:left;
-}
-h1,h2,h3,h4,h5,h6{
-	font-size:100%;
-	font-weight:normal;
-}
-q:before,q:after{
-	content:'';
-}
-abbr,acronym{
-	border:0;
-	font-variant:normal;
-}
-sup{
-	vertical-align:text-top;
-}
-sub{
-	vertical-align:text-bottom;
-}
-input,textarea,select{
-	font-family:inherit;
-	font-size:inherit;
-	font-weight:inherit;
 
+body {
+  height: 100%;
 }
-legend{
-	color:#000;
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
 }
-a{
-	text-decoration: none;
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-#categories{
-    background-color: #424f5a;
-    background-image: url("../img/fox-tail.png");
-    background-position: 0 bottom;
-    background-repeat: no-repeat;
-    color: #c1c1c1;
-    height: 100%;
-    position: fixed;
-    width: 300px;
+
+fieldset, img {
+  border: 0;
 }
-.head{
-	text-align: center;
-	margin: 30px 0;
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
 }
-#logo{
-	width: 125px;
-	height: 125px;
-	display: inline-block;
-	background-color: #ffffff;
-	border-radius: 50%;
-	transition: background-color 3s ease 0s;
+
+ol, ul {
+  list-style: none;
 }
-#logo.change{
-	background-color: #ff9500;
+
+caption, th {
+  text-align: left;
 }
-#categories h1{
-	font-size: 17px;
-	color: #ffffff;
-	margin: 10px 0;
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
 }
-#nav li{
-	cursor: pointer;
-	text-indent: 20px;
+
+q:before, q:after {
+  content: '';
 }
-#nav li:target{
-	box-shadow: 4px 0 0 0 #ff9500 inset;
-	background-color: #343f48;
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
 }
-#nav li:target:nth-child(2n){
-	box-shadow: 4px 0 0 0 #c43d28 inset;
+
+sup {
+  vertical-align: text-top;
 }
-#nav li:target a{
-	color: #ffffff;
+
+sub {
+  vertical-align: text-bottom;
 }
-#nav li:hover{
-	background-color: #5e6972;
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
-#nav li a{
-	line-height: 3;
-	color: #C1C1C1;
-	display: block;
+
+legend {
+  color: #000;
 }
-#main{
-	font-size: 15px;
-	line-height: 2;
-	padding: 50px 50px 0 350px;
+
+a {
+  text-decoration: none;
+}
+
+#categories {
+  background-color: #424f5a;
+  background-image: url("../img/fox-tail.png");
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  color: #c1c1c1;
+  height: 100%;
+  position: fixed;
+  width: 300px;
+}
+
+.head {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#logo {
+  width: 125px;
+  height: 125px;
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: background-color 3s ease 0s;
+}
+
+#logo.change {
+  background-color: #ff9500;
+}
+
+#categories h1 {
+  font-size: 17px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+#nav li {
+  cursor: pointer;
+  text-indent: 20px;
+}
+
+#nav li a {
+  line-height: 3;
+  color: #C1C1C1;
+  display: block;
+  text-shadow: 2px 0 2px #424f5a, -2px 0 2px #424f5a, 0 2px 2px #424f5a, 0 -2px 2px #424f5a;
+}
+
+#nav li a:focus, #nav li a:hover {
+  background-color: rgba(0, 0, 0, 0.50);
+  text-shadow: 2px 0 2px #21272d, -2px 0 2px #21272d, 0 2px 2px #21272d, 0 -2px 2px #21272d;
+}
+
+#nav li.cu a {
+  background-color: rgba(255, 255, 255, 0.10);
+  color: #ffffff;
+  text-shadow: 2px 0 2px #545f69, -2px 0 2px #545f69, 0 2px 2px #545f69, 0 -2px 2px #545f69;
+}
+
+#nav li.cu {
+  box-shadow: 4px 0 0 0 #ff9500 inset;
+}
+
+#nav li.cu:nth-child(2n) {
+  box-shadow: 4px 0 0 0 #c43d28 inset;
+}
+
+#main {
+  font-size: 15px;
+  line-height: 2;
+  padding: 50px 50px 0 350px;
   display: block;
 }
-#main h2{
-	border-bottom: 1px solid #e2e2e2;
-	font-size: 25px;
-	line-height: 2;
-	margin-bottom: 5px;
+
+#main h2 {
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 25px;
+  line-height: 2;
+  margin-bottom: 5px;
 }
-#main a{
-	color: #38a2db;
+
+#main a {
+  color: #38a2db;
 }
-.menber,.join-us{
-	padding-top: 45px;
+
+.menber, .join-us {
+  padding-top: 45px;
 }
-.menber-list li{
-	text-align: center;
-	display: inline-block;
-	position: relative;
-	width: 90px;
-	height: 90px;
-	overflow: hidden;
-	margin: 10px;
-    border-radius: 50%;
-	border:4px solid;
-	border-color: #fcb34d #f6822f #f6822f #fcb34d;	
+
+.menber-list li {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: #fcb34d #f6822f #f6822f #fcb34d;
 }
-#main .menber-list li a{
-    color: #ffffff;
-    display: inline-block;
-    line-height: 90px;
-    width: 90px;
+
+#main .menber-list li a {
+  color: #ffffff;
+  display: inline-block;
+  line-height: 90px;
+  width: 90px;
 }
-.menber-list li p{
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: rgba(66,79,90,0.5);
-	width: 90px;
-	height: 90px;
-	display: none;
+
+.menber-list li p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(66,79,90,0.5);
+  width: 90px;
+  height: 90px;
+  display: none;
 }
-.menber-list li:hover p{
-	display: block;
+
+.menber-list li:hover p {
+  display: block;
 }
-#ridicule{
-	padding-top: 45px;
+
+#ridicule {
+  padding-top: 45px;
 }
-#ridicule h2{
-	border-bottom: 1px solid #e2e2e2;
+
+#ridicule h2 {
+  border-bottom: 1px solid #e2e2e2;
 }
-.us-list table{
-	width: 100%;
-	margin: 20px 0;
+
+.us-list table {
+  width: 100%;
+  margin: 20px 0;
 }
-.us-list table th{
-	text-align: center;
+
+.us-list table th {
+  text-align: center;
 }
-.us-list table td{
-	padding: 5px 0;
+
+.us-list table td {
+  padding: 5px 0;
 }
-.us-list table tr:nth-child(2n+1){
-	background-color: #e2e2e2;
+
+.us-list table tr:nth-child(2n+1) {
+  background-color: #e2e2e2;
 }
+
 .us-list tr td:nth-child(4) {
-    min-width: 40%;
+  min-width: 40%;
 }
-#main .installer{
-	background: linear-gradient(to bottom, #43a6e2, #277ac1) repeat scroll 0 0 rgba(0, 0, 0, 0);
-	border-radius: 5px;
-	display: inline-block;
-	color: #ffffff;
-	text-align: center;
-	margin-left: 10px;
-	padding: 0 10px;
-	box-shadow: 0 1px rgba(0, 0, 0, 0.1), 0 -2px rgba(0, 0, 0, 0.1) inset;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+
+#main .button {
+  background: linear-gradient(to bottom, #43a6e2, #277ac1);
+  border-radius: 5px;
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 10px;
+  padding: 0 10px;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.1), 0 -2px rgba(0, 0, 0, 0.1) inset;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 }
-#main .installer:hover,#main .installer:active{
-    box-shadow: 0 1px rgba(0, 0, 0, 0.1), 0 -2px rgba(0, 0, 0, 0.1) inset, 0 0 100px rgba(255, 255, 255, 0.2) inset;
-    text-decoration: none;
+
+#main .button:hover, #main .button:focus {
+  box-shadow: 0 1px rgba(0, 0, 0, 0.1), 0 -2px rgba(0, 0, 0, 0.1) inset, 0 0 100px rgba(255, 255, 255, 0.2) inset;
+  text-decoration: none;
+}
+
+#main .button:active {
+  background: linear-gradient(to bottom, #277ac1, #43a6e2);
+  box-shadow: 0 2px rgba(0, 0, 0, 0.1) inset, 0 -2px rgba(255, 255, 255, 0.1) inset, 0 0 100px rgba(0, 0, 0, 0.2) inset;
 }

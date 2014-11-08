@@ -40,8 +40,28 @@
     xhr.send(details.body);
   }
 
-  fxb.load = function () {
+  fxb.link = function () {
+    var n = fxb.conf.dom.nav.querySelectorAll('a');
+    var events = ['mousedown', 'focus', 'touchstart'];
+    for (var i = 0, l = n.length; i < l; i++) (function (a) {
+      var updateLink = function () {
+        a.href = a.href.replace(/^.*\/([^\/]*)\.html/, '#$1');
+        events.forEach(function (e) { a.removeEventListener(e, updateLink); });
+      };
+      events.forEach(function (e) { a.addEventListener(e, updateLink); });
+    }(n[i]));
+  };
+
+  fxb.nav = function () {
     var page = location.hash.replace(/^(#?)([^?#]*)((\?|#).*)?$/, '$2') || 'home';
+    var cu = document.querySelector('.cu');
+    if (cu) cu.classList.remove('cu');
+    document.getElementById(page).classList.add('cu');
+    return page;
+  };
+
+  fxb.load = function () {
+    var page = fxb.nav();
     fxb.conf.dom.main.innerHTML = '';
     fxb.loading(true);
     fxb.ajax({
@@ -69,6 +89,7 @@
   fxb.init = function () {
     fxb.load();
     window.addEventListener("hashchange", fxb.load);
+    fxb.link();
   }
 
   window.fxb = fxb;
