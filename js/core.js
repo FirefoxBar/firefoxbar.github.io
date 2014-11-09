@@ -78,6 +78,7 @@
         fxb.conf.dom.main.innerHTML = dom.querySelector('body').innerHTML;
         var scripts = dom.querySelectorAll('head script.exec');
         for (var i = 0, l = scripts.length; i < l; i++) addScript(scripts[i]);
+        document.title = dom.querySelector('title').textContent;
       },
       onerror: function () {
         fxb.loading(false);
