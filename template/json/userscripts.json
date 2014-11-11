@@ -33,5 +33,12 @@
 		"installURL":"https://github.com/FirefoxBar/userscript/raw/master/Tieba_Lzl_Dialogue/Tieba_Lzl_Dialogue.user.js",
 		"homepageURL":"https://github.com/FirefoxBar/userscript/raw/master/Tieba_Lzl_Dialogue",
 		"description":"贴吧楼中楼弹出框查看回复。"
+	},
+	{
+		"name":"Tieba Kuso",
+		"version":"0.1",		
+		"installURL":"https://github.com/FirefoxBar/userscript/raw/master/Tieba_Kuso/Tieba_Kuso.user.js",
+		"homepageURL":"https://github.com/FirefoxBar/userscript/raw/master/Tieba_Kuso",
+		"description":"贴吧头像恶搞。"
 	}
 ]
