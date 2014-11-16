@@ -9,7 +9,7 @@
     top: 0;
     width: 70px;
 }
-.loading .bounce {
+.loading >div {
 	width: 18px;
 	height: 18px;
 	background-color: #c43927;
@@ -19,12 +19,12 @@
 	-webkit-animation: bouncedelay 1.4s infinite ease-in-out both;
 	animation: bouncedelay 1.4s infinite ease-in-out both;
 }
-.loading .bounce:nth-child(1) {
+.loading >div:nth-child(1) {
 	-moz-animation-delay: -0.32s;
 	-webkit-animation-delay: -0.32s;
 	animation-delay: -0.32s;
 }
-.loading .bounce:nth-child(2) {
+.loading >div:nth-child(2) {
 	-moz-animation-delay: -0.16s;
 	-webkit-animation-delay: -0.16s;
 	animation-delay: -0.16s;
