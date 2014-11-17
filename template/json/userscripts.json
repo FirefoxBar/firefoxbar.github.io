@@ -40,5 +40,12 @@
 		"installURL":"https://github.com/FirefoxBar/userscript/raw/master/Tieba_Kuso/Tieba_Kuso.user.js",
 		"homepageURL":"https://github.com/FirefoxBar/userscript/raw/master/Tieba_Kuso",
 		"description":"贴吧头像恶搞。"
+	},
+	{
+		"name":"Post Del Robot",
+		"version":"1",		
+		"installURL":"https://github.com/FirefoxBar/userscript/raw/master/Post_Del_Robot/PostDelRobot.user.js",
+		"homepageURL":"https://github.com/FirefoxBar/userscript/raw/master/Post_Del_Robot",
+		"description":"删帖机器人。"
 	}
 ]
