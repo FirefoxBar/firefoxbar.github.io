@@ -1,39 +1,36 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  <title>用户脚本 - Firefox 吧项目组</title>
-  <meta charset="utf-8" />
-  <script class="redirect">location.replace('/#userscripts');</script>
-  <script class="exec">
-    (function () {
-      if (typeof fxb === "undefined") return;
-      var list = document.querySelector(".us-list table tbody");
-      fxb.ajax("template/json/userscripts.json", function (e) {
-        var rt = JSON.parse(this.responseText);
-        var html = "";
-        rt.forEach(function (i) {
-          html = html + ("<tr>" +
-          "<td><a class='installer button' href='" + i.installURL + "'>+ 安装</a></td>" +
-          "<td><a href='" + i.homepageURL + "' target='_blank'>" + i.name + "</a></td>" +
-          "<td>" + i.version + "</td>" +
-          "<td>" + i.description + "</td>"
-          + "</tr>");
-        });
-        list.innerHTML = html;
-      });
-    })();
+	<title>用户脚本 - Firefox 吧项目组</title>
+	<meta charset="utf-8" />
+	<script class="redirect">location.replace('/#userscripts');</script>
+	<script class="exec">
+    (function() {
+		if (typeof fxb === "undefined") return;
+		var list = document.querySelector(".us-list table tbody");
+		fxb.ajax("template/json/userscripts.json",
+		function(e) {
+			var rt = JSON.parse(this.responseText);
+			var html = "";
+			rt.forEach(function(i) {
+				html += "<tr>" + "<td><a class='installer button' href='" + i.installURL + "'>+ 安装</a></td>" + "<td><a href='" + i.homepageURL + "' target='_blank'>" + i.name + "</a></td>" + "<td>" + i.version + "</td>" + "<td>" + i.description + "</td>" + "</tr>";
+			});
+			list.innerHTML = html;
+		});
+	})();
   </script>
 </head>
 <body>
-  <div>
-    <h2>用户脚本</h2>
-    <p>用户脚本是运行在浏览器端的外挂式 JavaScript 脚本。</p>
-    <p>在 Firefox 平台上，主要通过 <a href="https://addons.mozilla.org/zh-cn/firefox/addon/greasemonkey/" target="_blank">GreaseMonkey</a>、<a href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptish/" target="_blank">Scriptish</a> 等扩展对用户脚本进行使用和管理。</p>
-    <div class="us-list">
-      <table>
-        <tbody></tbody>
-      </table>
-    </div>
-  </div>
+	<div>
+		<h2>用户脚本</h2>
+		<p>用户脚本是运行在浏览器端的外挂式 JavaScript 脚本。</p>
+		<p>在 Firefox 平台上，主要通过 <a href="https://addons.mozilla.org/zh-cn/firefox/addon/greasemonkey/" target="_blank">GreaseMonkey</a>、<a href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptish/" target="_blank">Scriptish</a> 等扩展对用户脚本进行使用和管理。</p>
+		<p><a href="http://firefox.sylingd.com/html/js/how-to-install.html" target="_blank">查看其他平台</a></p>
+		<div class="us-list">
+			<table>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
 </body>
 </html>

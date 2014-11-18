@@ -1,53 +1,44 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  <title>Firefox 吧项目组</title>
-  <meta charset="utf-8" />
-  <script class="redirect">location.replace('/#home');</script>
-  <script class="exec">
-    (function () {
-      if (typeof fxb === "undefined") return;
-      var list = document.querySelector(".menber-list");
-      fxb.ajax("/template/json/people.json", function (e) {
-        var rt = JSON.parse(this.responseText);
-        var html = "";
-        rt.forEach(function (i) {
-          html = html + ("<li><img src='" +
-          i.avatar + "'><p><a href='" + i.url + "' target='_blank'>" + i.name + "</a></p></li>");
-        });
-        list.innerHTML = "<ul>" + html + "</ul>";
-      });
-    })();
-    var duoshuoQuery = { short_name: "firefoxbar" };
-    (function () {
-      if ("undefined" === typeof DUOSHUO) {
-        var ds = document.createElement('script');
-        ds.async = true;
-        ds.src = '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        return document.head.appendChild(ds);
-      }
-      DUOSHUO.EmbedThread(document.querySelector(".ds-thread"));
-    })();
+	<title>Firefox 吧项目组</title>
+	<meta charset="utf-8" />
+	<script class="redirect">location.replace('/#home');</script>
+	<script class="exec">
+	var duoshuoQuery = { short_name: "firefoxbar" };
+	(function() {
+		if (typeof fxb === "undefined") return;
+		var list = document.querySelector(".menber-list");
+		fxb.ajax("/template/json/people.json",
+		function(e) {
+			var rt = JSON.parse(this.responseText);
+			var html = "";
+			rt.forEach(function(i) {
+				html = html + ("<li><img src='" + i.avatar + "'><p><a href='" + i.url + "' target='_blank'>" + i.name + "</a></p></li>");
+			});
+			list.innerHTML = "<ul>" + html + "</ul>";
+		});
+		})();
   </script>
 </head>
 <body>
-  <div>
-    <h2>Firefox 吧项目组</h2>
-    <p>Firefox 吧项目组是由百度 <a href="http://tieba.baidu.com/f?kw=firefox" target="_blank">Firefox吧</a> 吧友组成的组织。</p>
-    <p>这里主要用于发布一些原创的浏览器脚本、样式、扩展等。</p>
-    <div class="join-us">
-      <h2>加入我们</h2>
-      <p>项目地址：<a target="_blank" href="https://github.com/FirefoxBar">https://github.com/FirefoxBar</a></p>
-    </div>
-    <div class="menber">
-      <h2>项目组成员</h2>
-      <div class="menber-list"></div>
-    </div>
-  </div>
-  <div id="ridicule">
-    <h2>我要吐槽（╯‵□′）╯︵┴─┴ </h2>
-    <div class="ds-thread" data-thread-key="home" data-title="Firefox 吧项目组" data-url="http://firefoxbar.github.io"></div>
-  </div>
+	<div>
+		<h2>Firefox 吧项目组</h2>
+		<p>Firefox 吧项目组是由百度 <a href="http://tieba.baidu.com/f?kw=firefox" target="_blank">Firefox吧</a> 吧友组成的组织。</p>
+		<p>这里主要用于发布一些原创的浏览器脚本、样式、扩展等。</p>
+		<div class="join-us">
+			<h2>加入我们</h2>
+			<p>项目地址：<a target="_blank" href="https://github.com/FirefoxBar">https://github.com/FirefoxBar</a></p>
+		</div>
+		<div class="menber">
+			<h2>项目组成员</h2>
+			<div class="menber-list"></div>
+		</div>
+	</div>
+	<div id="ridicule">
+		<h2>我要吐槽（╯‵□′）╯︵┴─┴ </h2>
+		<div class="ds-thread" data-thread-key="home" data-title="Firefox 吧项目组" data-url="http://firefoxbar.github.io"></div>
+	</div>
+	<script type="text/javascript" src="http://static.duoshuo.com/embed.js" async="async"></script>
 </body>
 </html>
