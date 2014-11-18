@@ -18,7 +18,15 @@
 			});
 			list.innerHTML = "<ul>" + html + "</ul>";
 		});
-		})();
+		if ("undefined" === typeof DUOSHUO) {
+			var ds = document.createElement('script');
+			ds.async = true;
+			ds.src = '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			return document.head.appendChild(ds);
+		}
+		DUOSHUO.EmbedThread(document.querySelector(".ds-thread"));
+    })();
   </script>
 </head>
 <body>
