@@ -8,11 +8,12 @@
     (function() {
 		if (typeof fxb === "undefined") return;
 		var list = document.querySelector(".us-list table tbody");
-		fxb.ajax("template/json/userscripts.json",
+		fxb.ajax("https://api.github.com/repos/FirefoxBar/userscript/contents/userscripts.json",
 		function(e) {
-			var rt = JSON.parse(this.responseText);
+			var content = JSON.parse(this.responseText).content;
+            var userscripts = JSON.parse(decodeURIComponent(escape(atob(content))));
 			var html = "";
-			rt.forEach(function(i) {
+			userscripts.forEach(function(i) {
 				html += "<tr>" + "<td><a class='installer button' href='" + i.installURL + "'>+ 安装</a></td>" + "<td><a href='" + i.homepageURL + "' target='_blank'>" + i.name + "</a></td>" + "<td>" + i.version + "</td>" + "<td>" + i.description + "</td>" + "</tr>";
 			});
 			list.innerHTML = html;
