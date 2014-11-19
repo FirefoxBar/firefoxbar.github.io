@@ -190,6 +190,7 @@ a {
   width: 90px;
   height: 90px;
   display: none;
+  border-radius: 50%;
 }
 
 .menber-list li:hover p {
