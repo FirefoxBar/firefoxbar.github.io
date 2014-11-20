@@ -8,6 +8,7 @@
     text-align: center;
     top: 0;
     width: 70px;
+    z-index: 3;
 }
 .loading >div {
 	width: 18px;
@@ -139,4 +140,33 @@
     -moz-animation: 3s ease 3s normal none infinite running sleep;
     -webkit-animation: 3s ease 3s normal none infinite running sleep;
     animation: 3s ease 3s normal none infinite running sleep;
+}
+
+#view-source{
+    background: none repeat scroll 0 0 #f5f2f0;
+    box-shadow: none;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(900px);
+    transition: all 0.25s ease 0s;
+    width: 900px;
+    z-index: 2;
+}
+#view-source.expanding{
+    box-shadow: 1px 2px 4px #000;
+    transform: none;
+}
+#collapsing{
+    cursor: pointer;
+    display: none;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }

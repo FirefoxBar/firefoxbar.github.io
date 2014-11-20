@@ -74,6 +74,16 @@ a {
   text-decoration: none;
 }
 
+*::-moz-selection {
+    background-color: rgb(203, 46, 21);
+    color: #ffffff;
+}
+
+*::selection {
+    background-color: rgb(203, 46, 21);
+    color: #ffffff;
+}
+
 #categories {
   background-color: #424f5a;
   background-image: url("../img/fox-tail.png");
@@ -226,7 +236,13 @@ a {
   min-width: 40%;
 }
 
+.button.installer:before{
+    content: "+";
+    padding-right: 5px;
+}
+
 #main .button {
+  cursor: pointer;
   background: linear-gradient(to bottom, #43a6e2, #277ac1);
   border-radius: 5px;
   display: inline-block;
