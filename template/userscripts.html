@@ -39,11 +39,10 @@
         var cps = document.querySelector("#collapsing");
         
         fxb.loading(true);
-		fxb.ajax("https://api.github.com/repos/FirefoxBar/userscript/contents/userscripts.json"+"?client_id="+clientID+"&client_secret="+clientSecret,
+		fxb.ajax('http://firefox8-team.stor.sinaapp.com/json/userscripts.json',
 		function(e) {
             fxb.loading(false);
-			var content = JSON.parse(this.responseText).content;
-            var userscripts = JSON.parse(decodeURIComponent(escape(atob(content))));
+            var userscripts = JSON.parse(this.responseText);
 			var html = "";
 			userscripts.forEach(function(i) {
 				html += "<tr>" + "<td><a class='installer button' href='" +
