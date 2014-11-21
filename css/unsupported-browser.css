@@ -1,0 +1,23 @@
+html,body{
+    text-align: center;
+    margin: 0;
+    height: 100%;
+}
+html{
+    font-family: STHeiti,"Microsoft Yahei",Helmet,Freesans,Arial,sans-serif;
+    background-color: #424f5a;
+    color: #ffffff;
+    font-size: 16px;
+}
+h1{
+    font-size: 20px;
+    color: #ffffff;
+}
+a{
+    color: #e2e2e2;
+    font-weight: bold;
+    text-decoration: none;
+}
+#logo{
+    padding-top: 100px;
+}
