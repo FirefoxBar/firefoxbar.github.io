@@ -9,7 +9,7 @@
 	(function() {
 		if (typeof fxb === "undefined") return;
 		var list = document.querySelector(".menber-list");
-		fxb.ajax('http://firefox8-team.stor.sinaapp.com/template/json/people.json',
+		fxb.ajax('http://firefox8-team.stor.sinaapp.com/template/json/people.json?_r='+Math.random(),
 		function(e) {
 			var rt = JSON.parse(this.responseText);
 			var html = "";

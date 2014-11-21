@@ -39,7 +39,7 @@
         var cps = document.querySelector("#collapsing");
         
         fxb.loading(true);
-		fxb.ajax('http://firefox8-team.stor.sinaapp.com/json/userscripts.json',
+		fxb.ajax('http://firefox8-team.stor.sinaapp.com/json/userscripts.json?_r='+Math.random(),
 		function(e) {
             fxb.loading(false);
             var userscripts = JSON.parse(this.responseText);
@@ -66,7 +66,7 @@
             fxb.loading(true);
             var path = e.target.previousSibling.href.slice(51);
             setTimeout(function(){
-                fxb.ajax("https://api.github.com/repos/FirefoxBar/userscript/contents/"+path+"?client_id="+clientID+"&client_secret="+clientSecret,
+                fxb.ajax("https://api.github.com/repos/FirefoxBar/userscript/contents/"+path+"?client_id="+clientID+"&client_secret="+clientSecret+"&_r="+Math.random(),
                 function() {
                     fxb.loading(false);
                     var content = JSON.parse(this.responseText).content;
