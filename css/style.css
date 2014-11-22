@@ -119,6 +119,9 @@ a {
   margin: 10px 0;
 }
 
+#menu{
+  display: none;
+}
 #nav li {
   cursor: pointer;
   text-indent: 20px;

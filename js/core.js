@@ -8,6 +8,7 @@
 				nav: document.querySelector("#nav"),
 				logo: document.querySelector("#logo"),
 				loading: document.querySelector("#loading"),
+                menu: document.querySelector("#menu")
 			},
 		}
 	})();
@@ -16,6 +17,20 @@
 		fxb.conf.dom.loading.style.display = loading ? 'block': 'none';
 	};
 
+    fxb.menu = function(){
+        function toggleMenu(){
+            fxb.conf.dom.nav.classList.contains('ex') ?
+            fxb.conf.dom.nav.classList.remove('ex') :
+            fxb.conf.dom.nav.classList.add('ex');        
+        }
+        fxb.conf.dom.menu.addEventListener('click',function(){
+            toggleMenu();
+        },false);
+        fxb.conf.dom.nav.addEventListener('click',function(){
+            toggleMenu();            
+        },false);     
+    }
+    
 	fxb.ajax = function(details, onload) {
 
 		if (typeof details === 'string') details = {
@@ -48,7 +63,7 @@
 		for (var i = 0,
 		l = n.length; i < l; i++)(function(a) {
 			var updateLink = function() {
-				a.href = a.href.replace(/^.*\/([^\/]*)\.html/, '#$1');
+				a.href = a.href.replace(/^.*\/([^\/]*)\.html/, '#$1');               
 				events.forEach(function(e) {
 					a.removeEventListener(e, updateLink);
 				});
@@ -102,6 +117,7 @@
 		fxb.load();
 		window.addEventListener("hashchange", fxb.load);
 		fxb.link();
+        fxb.menu();
 	}
 
 	window.fxb = fxb;
