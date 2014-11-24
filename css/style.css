@@ -266,3 +266,7 @@ a {
   background: linear-gradient(to bottom, #277ac1, #43a6e2);
   box-shadow: 0 2px rgba(0, 0, 0, 0.1) inset, 0 -2px rgba(255, 255, 255, 0.1) inset, 0 0 100px rgba(0, 0, 0, 0.2) inset;
 }
+
+.install-btns {
+	width: 200px;
+}
