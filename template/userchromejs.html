@@ -4,6 +4,108 @@
   <title>UC脚本 - Firefox 吧项目组</title>
   <meta charset="utf-8" />
   <script class="redirect">location.replace('/#userchromejs');</script>
+	<script class="exec">
+    (function() {
+		if (typeof fxb === "undefined") return;
+        
+        var clientID = "89dcce1a589176e7b4c2";
+        var clientSecret = "d1e5b29533f84ee8d4b37bca64ad07f76178ad73";
+        
+        if (typeof Prism === "undefined"){
+            var s = document.createElement('script');
+            s.src = 'http://firefox8-team.stor.sinaapp.com/js/prism.js';
+            s.onload = function(){
+                Prism.hooks.add('after-highlight', function (env) {
+                    var linesNum = (1 + env.code.split('\n').length);
+                    var lineNumbersWrapper;
+
+                    lines = new Array(linesNum);
+                    lines = lines.join('<span></span>');
+                    lineNumbersWrapper = document.createElement('span');
+                    lineNumbersWrapper.className = 'line-numbers-rows';
+                    lineNumbersWrapper.innerHTML = lines;
+                    env.element.appendChild(lineNumbersWrapper);
+                });         
+            }
+            document.body.appendChild(s);
+            setTimeout(function() {
+                s.parentNode.removeChild(s);           
+            },0);
+        }
+        
+        var code = document.querySelector("#view-source");
+        var source = code.querySelector("code");
+		var list = document.querySelector(".us-list table tbody");
+        var cps = document.querySelector("#collapsing");
+        
+        fxb.loading(true);
+		fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/userChromeJS.json"+"?client_id="+clientID+"&client_secret="+clientSecret+"&_r="+Math.random(),
+		function(e) {
+            fxb.loading(false);
+            var content = JSON.parse(this.responseText).content;
+            var userscripts = JSON.parse(decodeURIComponent(escape(atob(content))));
+			var html = "";
+			userscripts.forEach(function(i) {
+				html += "<tr>" + "<td class='install-btns'><a class='installer button' href='" +
+                i.installURL + "' target='_blank'>查看</a><a class='view-source button'>源码</a><a class='download button'>下载</a></td>" + 
+                "<td><a href='" + i.homepageURL + "' target='_blank'>" +
+                i.name + "</a></td>" + "<td>" + i.version + "</td>" + "<td>" + i.description + "</td>" + "</tr>";
+			});
+			list.innerHTML = html;
+            var vs = document.querySelectorAll(".view-source");
+            Array.prototype.forEach.call(vs,function(i){
+                i.addEventListener("click",getSource,false);
+            });
+            var dl = document.querySelectorAll(".download");
+            Array.prototype.forEach.call(dl,function(i){
+                i.addEventListener("click",download,false);
+            });
+        });
+        cps.addEventListener("click",function(){
+            source.innerHTML = "";
+            code.classList.remove("expanding");
+            cps.style.display = "none";
+        },false);
+        
+        function getSource(e){
+            fxb.loading(true);
+            var path = e.target.previousSibling.href.slice(54);
+            setTimeout(function(){
+                fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+"?client_id="+clientID+"&client_secret="+clientSecret+"&_r="+Math.random(),
+                function() {
+                    fxb.loading(false);
+                    var content = JSON.parse(this.responseText).content;
+                    var sourceCode = decodeURIComponent(escape(atob(content)));
+                    source.textContent = sourceCode;
+                    Prism && Prism.highlightElement(source);   
+                }
+            )},250);
+            code.classList.add("expanding");
+            cps.style.display = "block";            
+        }
+        
+        function download(e){
+            target = e.target;
+            if(target.getAttribute("download")) return;
+            fxb.loading(true);
+            var path = target.previousSibling.previousSibling.href.slice(54);
+            fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+"?client_id="+clientID+"&client_secret="+clientSecret,
+            function() {
+                fxb.loading(false);
+                var content = JSON.parse(this.responseText).content;
+                var sourceCode = decodeURIComponent(escape(atob(content)));
+                var blob = new Blob([sourceCode]);
+                var evt = document.createEvent("MouseEvents");
+                evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, 
+                false, false, false, false, 0, null);
+                evt.initEvent("click", false, false);
+                target.download = path.slice(path.indexOf("/") + 1);
+                target.href = URL.createObjectURL(blob);
+                target.dispatchEvent(evt);
+            });      
+        }
+	})();
+  </script>  
 </head>
 <body>
   <div>
@@ -11,6 +113,13 @@
     <p>UC 脚本是适用于 <a href="http://userchromejs.mozdev.org/" target="_blank">userChromeJS</a> 扩展的用户脚本</p>
     <div class="us-list">
     </div>
-  </div>
+		<div class="us-list">
+			<table><tbody></tbody></table>
+		</div>
+        <div id="view-source"><pre class="line-numbers"><code class="language-javascript"></code></pre>
+        </div>
+        <div id="collapsing" title="关闭代码"></div>
+	</div>
+    <link rel="stylesheet" href="css/prism.css">
 </body>
 </html>
