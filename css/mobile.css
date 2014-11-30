@@ -62,3 +62,8 @@ html{
 #main .button {
   min-width: 40px;
 }
+.links-cate li{
+    display: block;
+    float: none;
+    width: auto;
+}

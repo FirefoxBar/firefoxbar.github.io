@@ -7,10 +7,7 @@
 	<script class="exec">
     (function() {
 		if (typeof fxb === "undefined") return;
-        
-        var clientID = "89dcce1a589176e7b4c2";
-        var clientSecret = "d1e5b29533f84ee8d4b37bca64ad07f76178ad73";
-        
+              
         if (typeof Prism === "undefined"){
             var s = document.createElement('script');
             s.src = 'http://firefox8-team.stor.sinaapp.com/js/prism.js';
@@ -39,7 +36,8 @@
         var cps = document.querySelector("#collapsing");
         
         fxb.loading(true);
-		fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/userChromeJS.json"+"?client_id="+clientID+"&client_secret="+clientSecret+"&_r="+Math.random(),
+		fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/userChromeJS.json"+
+        "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret+"&_r="+Math.random(),
 		function(e) {
             fxb.loading(false);
             var content = JSON.parse(this.responseText).content;
@@ -71,7 +69,8 @@
             fxb.loading(true);
             var path = e.target.previousSibling.href.slice(54);
             setTimeout(function(){
-                fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+"?client_id="+clientID+"&client_secret="+clientSecret+"&_r="+Math.random(),
+                fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+"?client_id="+
+                fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret+"&_r="+Math.random(),
                 function() {
                     fxb.loading(false);
                     var content = JSON.parse(this.responseText).content;
@@ -89,7 +88,8 @@
             if(target.getAttribute("download")) return;
             fxb.loading(true);
             var path = target.previousSibling.previousSibling.href.slice(54);
-            fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+"?client_id="+clientID+"&client_secret="+clientSecret,
+            fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+
+            "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
             function() {
                 fxb.loading(false);
                 var content = JSON.parse(this.responseText).content;

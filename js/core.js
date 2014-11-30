@@ -2,6 +2,8 @@
 	var fxb = {};
 	fxb.conf = (function() {
 		return {
+            clientID: "89dcce1a589176e7b4c2",
+            clientSecret: "d1e5b29533f84ee8d4b37bca64ad07f76178ad73",
 			template: "template",
 			dom: {
 				main: document.querySelector("#main"),

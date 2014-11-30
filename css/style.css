@@ -156,11 +156,12 @@ a {
 #main {
   font-size: 15px;
   line-height: 2;
-  padding: 50px 50px 0 350px;
+  padding: 50px 50px 50px 350px;
   display: block;
 }
 
 #main h2 {
+  clear: both;
   border-bottom: 1px solid #e2e2e2;
   font-size: 25px;
   line-height: 2;
@@ -267,6 +268,24 @@ a {
   box-shadow: 0 2px rgba(0, 0, 0, 0.1) inset, 0 -2px rgba(255, 255, 255, 0.1) inset, 0 0 100px rgba(0, 0, 0, 0.2) inset;
 }
 
+.links-cate{
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 30px;
+}
+.links-cate li{
+    display: block;
+    float: left;
+    width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 1.5%;    
+}
+#main .submit.button{
+    display: block;
+    width: 70px;
+    margin: 0 auto;
+}
 .install-btns {
 	width: 200px;
 }
