@@ -20,8 +20,16 @@
                 "url":"http://www.firefox.com.cn/"
             },
             {
-                "name":"Android 版",
+                "name":"Android 版(国际版）",
                 "url":"https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+            },
+            {
+                "name":"Android 版(谋智版）",
+                "url":"http://www.firefox.com.cn/#mobile"
+            },
+            {
+                "name":"Android 版(国际版镜像）",
+                "url":"http://www.coolapk.com/apk/org.mozilla.firefox"
             }
         ]
     },
