@@ -100,6 +100,36 @@
             }
         ]
     },
+        {
+        "category":"Firefox社区",
+        "links":
+        [
+            {
+                "name":"Firefox贴吧",
+                "url":"http://tieba.baidu.com/f?kw=firefox"
+            },        
+            {
+                "name":"卡饭Firefox区",
+                "url":"http://bbs.kafan.cn/forum-215-1.html"
+            },
+            {
+                "name":"火狐社区（谋智官方） ",
+                "url":"http://mozilla.com.cn/moz-portal.html"
+            },
+            {
+                "name":"Firefox中文社区",
+                "url":"https://www.firefox.net.cn/"
+            },
+            {
+                "name":"mozest广场（官方翻译） ",
+                "url":"http://g.mozest.com/"
+            },
+            {
+                "name":"mozillazine（国外论坛）",
+                "url":"http://forums.mozillazine.org/"
+            },           
+        ]
+    },
     {
         "category":"其他资源",
         "links":
