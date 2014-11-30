@@ -108,7 +108,7 @@
                 "url":"http://bbs.kafan.cn/forum-215-1.html"
             },
             {
-                "name":"火狐社区（谋智官方） ",
+                "name":"火狐社区（谋智官方）",
                 "url":"http://mozilla.com.cn/moz-portal.html"
             },
             {
@@ -116,12 +116,49 @@
                 "url":"https://www.firefox.net.cn/"
             },
             {
-                "name":"mozest广场（官方翻译） ",
+                "name":"mozest广场（官方翻译）",
                 "url":"http://g.mozest.com/"
             },
             {
                 "name":"mozillazine（国外论坛）",
                 "url":"http://forums.mozillazine.org/"
+            }
+        ]
+    },
+    {
+        "category":"脚本样式",
+        "links":[
+            {
+                "name":"Greasy Fork",
+                "url":"https://greasyfork.org/zh-CN/scripts"
+            },
+            {
+                "name":"OpenUserJS",
+                "url":"https://openuserjs.org/"
+            },
+            {
+                "name":"MonkeyGuts",
+                "url":"https://monkeyguts.com/"
+            },
+            {
+                "name":"myUserJS",
+                "url":"http://myuserjs.org/"
+            },
+            {
+                "name":"Userscripts镜像1",
+                "url":"http://userscripts-mirror.org/"
+            },
+            {
+                "name":"Userscripts镜像2",
+                "url":"http://www.webextender.net/"
+            },
+            {
+                "name":"userstyles",
+                "url":"https://userstyles.org/"
+            },
+            {
+                "name":"FreeStyler",
+                "url":"http://freestyler.ws/"
             }
         ]
     },
