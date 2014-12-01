@@ -5,7 +5,7 @@
         "links":[
             {
                 "name":"FTP",
-                "url":"ftp://ftp.mozilla.org/"
+                "url":"ftp://ftp.mozilla.org/pub/firefox/"
             },
 			{
                 "name":"国际中文版",
@@ -16,7 +16,7 @@
                 "url":"https://www.mozilla.org/en-US/firefox/channel/#aurora"
             },
             {
-                "name":"Nightly 版",
+                "name":"Nightly版",
                 "url":"http://nightly.mozilla.org/"
             },
             {
@@ -24,15 +24,15 @@
                 "url":"http://www.firefox.com.cn/"
             },
             {
-                "name":"Android 版(国际版）",
+                "name":"Android国际版(Play)",
                 "url":"https://play.google.com/store/apps/details?id=org.mozilla.firefox"
             },
             {
-                "name":"Android 版(谋智版）",
+                "name":"Android谋智版",
                 "url":"http://www.firefox.com.cn/#mobile"
             },
             {
-                "name":"Android 版(国际版镜像）",
+                "name":"Android国际版(酷安)",
                 "url":"http://www.coolapk.com/apk/org.mozilla.firefox"
             }
         ]
@@ -41,23 +41,23 @@
         "category":"JavaScript",
         "links":[
             {
-                "name":"MDN(Javascript)",
-                "url":"https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                "name":"MDN(多国语言)",
+                "url":"https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
             },
             {
-                "name":"MSDN(JavaScript)",
+                "name":"MSDN(多国语言)",
                 "url":"http://msdn.microsoft.com/zh-cn/library/ie/d1et7k7c%28v=vs.94%29.aspx"
             },
             {
-                "name":"W3School(JavaScript)",
-                "url":"www.w3school.com.cn/js"
+                "name":"W3School(中文)",
+                "url":"http://www.w3school.com.cn/js"
             },
             {
-                "name":"W3Schools(JavaScript)",
-                "url":"www.w3schools.com/js/"
+                "name":"W3Schools(英文)",
+                "url":"http://www.w3schools.com/js/"
             },
             {
-                "name":"W3C(JavaScript)",
+                "name":"W3C(英文)",
                 "url":"http://www.w3.org/standards/webdesign/script"
             },
             {
@@ -70,19 +70,19 @@
         "category":"CSS",
         "links":[
             {
-                "name":"MDN(CSS)",
-                "url":"https://developer.mozilla.org/en-US/docs/Web/CSS"
+                "name":"MDN(多国语言)",
+                "url":"https://developer.mozilla.org/zh-CN/docs/Web/CSS"
             },
             {
-                "name":"W3C(CSS)",
+                "name":"W3C(英文)",
                 "url":"http://www.w3.org/Style/CSS/"
             },
             {
-                "name":"W3School(CSS)",
+                "name":"W3School(中文)",
                 "url":"http://www.w3school.com.cn/css/"
             },
             {
-                "name":"W3Schools(CSS)",
+                "name":"W3Schools(英文)",
                 "url":"http://www.w3schools.com/css/"
             }
         ]
