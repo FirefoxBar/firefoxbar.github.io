@@ -39,8 +39,7 @@
 		fxb.ajax("http://firefox8-team.stor.sinaapp.com/json/userChromeJS.json?_r="+Math.random(),
 		function(e) {
             fxb.loading(false);
-            var content = JSON.parse(this.responseText).content;
-            var userscripts = JSON.parse(decodeURIComponent(escape(atob(content))));
+            var userscripts = JSON.parse(this.responseText);
 			var html = "";
 			userscripts.forEach(function(i) {
 				html += "<tr>" + "<td class='install-btns'><a class='installer button' href='" +
