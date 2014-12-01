@@ -1,191 +1,188 @@
 [
-
     {
-        "category":"Firefox 下载",
-        "links":[
+        "category": "Firefox 下载",
+        "links": [
             {
-                "name":"FTP",
-                "url":"ftp://ftp.mozilla.org/pub/firefox/"
-            },
-			{
-                "name":"国际中文版",
-                "url":"http://www.mozilla.org/en-US/firefox/all/"
+                "name": "FTP",
+                "url": "ftp://ftp.mozilla.org/pub/firefox/"
             },
             {
-                "name":"开发者版",
-                "url":"https://www.mozilla.org/en-US/firefox/channel/#aurora"
+                "name": "国际中文版",
+                "url": "http://www.mozilla.org/en-US/firefox/all/"
             },
             {
-                "name":"Nightly版",
-                "url":"http://nightly.mozilla.org/"
+                "name": "开发者版",
+                "url": "https://www.mozilla.org/en-US/firefox/channel/#aurora"
             },
             {
-                "name":"中国(谋智)版",
-                "url":"http://www.firefox.com.cn/"
+                "name": "Nightly版",
+                "url": "http://nightly.mozilla.org/"
             },
             {
-                "name":"Android版(FTP)",
-                "url":"ftp://ftp.mozilla.org/pub/mobile/"
-            },,
-            {
-                "name":"Android国际版(Play)",
-                "url":"https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+                "name": "中国(谋智)版",
+                "url": "http://www.firefox.com.cn/"
             },
             {
-                "name":"Android谋智版",
-                "url":"http://www.firefox.com.cn/#mobile"
+                "name": "Android版(FTP)",
+                "url": "ftp://ftp.mozilla.org/pub/mobile/"
             },
             {
-                "name":"Android国际版(酷安)",
-                "url":"http://www.coolapk.com/apk/org.mozilla.firefox"
+                "name": "Android国际版(Play)",
+                "url": "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
             },
             {
-                "name":"Android Beta(酷安)",
-                "url":"http://www.coolapk.com/apk/org.mozilla.firefox_beta"
+                "name": "Android谋智版",
+                "url": "http://www.firefox.com.cn/#mobile"
+            },
+            {
+                "name": "Android国际版(酷安)",
+                "url": "http://www.coolapk.com/apk/org.mozilla.firefox"
+            },
+            {
+                "name": "Android Beta(酷安)",
+                "url": "http://www.coolapk.com/apk/org.mozilla.firefox_beta"
             }
         ]
     },
     {
-        "category":"JavaScript",
-        "links":[
+        "category": "JavaScript",
+        "links": [
             {
-                "name":"MDN(多国语言)",
-                "url":"https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
+                "name": "MDN(多国语言)",
+                "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
             },
             {
-                "name":"MSDN(多国语言)",
-                "url":"http://msdn.microsoft.com/zh-cn/library/ie/d1et7k7c%28v=vs.94%29.aspx"
+                "name": "MSDN(多国语言)",
+                "url": "http://msdn.microsoft.com/zh-cn/library/ie/d1et7k7c%28v=vs.94%29.aspx"
             },
             {
-                "name":"W3School(中文)",
-                "url":"http://www.w3school.com.cn/js"
+                "name": "W3School(中文)",
+                "url": "http://www.w3school.com.cn/js"
             },
             {
-                "name":"W3Schools(英文)",
-                "url":"http://www.w3schools.com/js/"
+                "name": "W3Schools(英文)",
+                "url": "http://www.w3schools.com/js/"
             },
             {
-                "name":"W3C(英文)",
-                "url":"http://www.w3.org/standards/webdesign/script"
+                "name": "W3C(英文)",
+                "url": "http://www.w3.org/standards/webdesign/script"
             },
             {
-                "name":"ECMAScript",
-                "url":"http://www.ecmascript.org/"
+                "name": "ECMAScript",
+                "url": "http://www.ecmascript.org/"
             }
         ]
     },
     {
-        "category":"CSS",
-        "links":[
+        "category": "CSS",
+        "links": [
             {
-                "name":"MDN(多国语言)",
-                "url":"https://developer.mozilla.org/zh-CN/docs/Web/CSS"
+                "name": "MDN(多国语言)",
+                "url": "https://developer.mozilla.org/zh-CN/docs/Web/CSS"
             },
             {
-                "name":"W3C(英文)",
-                "url":"http://www.w3.org/Style/CSS/"
+                "name": "W3C(英文)",
+                "url": "http://www.w3.org/Style/CSS/"
             },
             {
-                "name":"W3School(中文)",
-                "url":"http://www.w3school.com.cn/css/"
+                "name": "W3School(中文)",
+                "url": "http://www.w3school.com.cn/css/"
             },
             {
-                "name":"W3Schools(英文)",
-                "url":"http://www.w3schools.com/css/"
+                "name": "W3Schools(英文)",
+                "url": "http://www.w3schools.com/css/"
             }
         ]
     },
     {
-        "category":"扩展开发",
-        "links":[
+        "category": "扩展开发",
+        "links": [
             {
-                "name":"MDN(Add-ons)",
-                "url":"https://developer.mozilla.org/zh-CN/docs/Mozilla/add-ons"
+                "name": "MDN(Add-ons)",
+                "url": "https://developer.mozilla.org/zh-CN/docs/Mozilla/add-ons"
             },
             {
-                "name":"MDN(XUL)",
-                "url":"https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/xul"
+                "name": "MDN(XUL)",
+                "url": "https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/xul"
             },
             {
-                "name":"MDN(XPCOM)",
-                "url":"https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM"
+                "name": "MDN(XPCOM)",
+                "url": "https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM"
             },
             {
-                "name":"GreaseSpot Wiki",
-                "url":"wiki.greasespot.net/"
+                "name": "GreaseSpot Wiki",
+                "url": "wiki.greasespot.net/"
             }
         ]
     },
     {
-        "category":"Firefox社区",
-        "links":[
+        "category": "Firefox社区",
+        "links": [
             {
-                "name":"Firefox贴吧",
-                "url":"http://tieba.baidu.com/f?kw=firefox"
+                "name": "Firefox贴吧",
+                "url": "http://tieba.baidu.com/f?kw=firefox"
             },
             {
-                "name":"卡饭Firefox区",
-                "url":"http://bbs.kafan.cn/forum-215-1.html"
+                "name": "卡饭Firefox区",
+                "url": "http://bbs.kafan.cn/forum-215-1.html"
             },
             {
-                "name":"火狐社区（谋智官方）",
-                "url":"http://mozilla.com.cn/moz-portal.html"
+                "name": "火狐社区（谋智官方）",
+                "url": "http://mozilla.com.cn/moz-portal.html"
             },
             {
-                "name":"Firefox中文社区",
-                "url":"https://www.firefox.net.cn/"
+                "name": "Firefox中文社区",
+                "url": "https://www.firefox.net.cn/"
             },
             {
-                "name":"mozest广场（官方翻译）",
-                "url":"http://g.mozest.com/"
+                "name": "mozest广场（官方翻译）",
+                "url": "http://g.mozest.com/"
             },
             {
-                "name":"mozillazine（国外论坛）",
-                "url":"http://forums.mozillazine.org/"
+                "name": "mozillazine（国外论坛）",
+                "url": "http://forums.mozillazine.org/"
             }
         ]
     },
     {
-        "category":"脚本样式",
-        "links":[
+        "category": "脚本样式",
+        "links": [
             {
-                "name":"Greasy Fork",
-                "url":"https://greasyfork.org/zh-CN/scripts"
+                "name": "Greasy Fork",
+                "url": "https://greasyfork.org/zh-CN/scripts"
             },
             {
-                "name":"OpenUserJS",
-                "url":"https://openuserjs.org/"
+                "name": "OpenUserJS",
+                "url": "https://openuserjs.org/"
             },
             {
-                "name":"MonkeyGuts",
-                "url":"https://monkeyguts.com/"
+                "name": "MonkeyGuts",
+                "url": "https://monkeyguts.com/"
             },
             {
-                "name":"myUserJS",
-                "url":"http://myuserjs.org/"
+                "name": "myUserJS",
+                "url": "http://myuserjs.org/"
             },
             {
-                "name":"Userscripts镜像1",
-                "url":"http://userscripts-mirror.org/"
+                "name": "Userscripts镜像1",
+                "url": "http://userscripts-mirror.org/"
             },
             {
-                "name":"Userscripts镜像2",
-                "url":"http://www.webextender.net/"
+                "name": "Userscripts镜像2",
+                "url": "http://www.webextender.net/"
             },
             {
-                "name":"userstyles",
-                "url":"https://userstyles.org/"
+                "name": "userstyles",
+                "url": "https://userstyles.org/"
             },
             {
-                "name":"FreeStyler",
-                "url":"http://freestyler.ws/"
+                "name": "FreeStyler",
+                "url": "http://freestyler.ws/"
             }
         ]
     },
     {
-        "category":"其他资源",
-        "links":[
-        ]
+        "category": "其他资源",
+        "links": []
     }
-
 ]
