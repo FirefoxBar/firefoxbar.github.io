@@ -4,6 +4,10 @@
         "category":"Firefox 下载",
         "links":[
             {
+                "name":"FTP",
+                "url":"ftp://ftp.mozilla.org/"
+            },
+			{
                 "name":"国际中文版",
                 "url":"http://www.mozilla.org/en-US/firefox/all/"
             },
