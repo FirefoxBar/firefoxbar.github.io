@@ -24,6 +24,10 @@
                 "url":"http://www.firefox.com.cn/"
             },
             {
+                "name":"Android版(FTP)",
+                "url":"ftp://ftp.mozilla.org/pub/mobile/"
+            },,
+            {
                 "name":"Android国际版(Play)",
                 "url":"https://play.google.com/store/apps/details?id=org.mozilla.firefox"
             },
@@ -34,6 +38,10 @@
             {
                 "name":"Android国际版(酷安)",
                 "url":"http://www.coolapk.com/apk/org.mozilla.firefox"
+            },
+            {
+                "name":"Android Beta(酷安)",
+                "url":"http://www.coolapk.com/apk/org.mozilla.firefox_beta"
             }
         ]
     },
