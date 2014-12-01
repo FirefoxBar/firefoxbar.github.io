@@ -289,3 +289,8 @@ a {
 .install-btns {
 	width: 200px;
 }
+
+/* 针对蜘蛛 */
+#spider {
+	display: none;
+}

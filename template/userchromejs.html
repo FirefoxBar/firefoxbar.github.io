@@ -36,8 +36,7 @@
         var cps = document.querySelector("#collapsing");
         
         fxb.loading(true);
-		fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/userChromeJS.json"+
-        "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret+"&_r="+Math.random(),
+		fxb.ajax("http://firefox8-team.stor.sinaapp.com/json/userChromeJS.json?_r="+Math.random(),
 		function(e) {
             fxb.loading(false);
             var content = JSON.parse(this.responseText).content;
