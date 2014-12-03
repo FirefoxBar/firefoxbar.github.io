@@ -5,43 +5,46 @@
 	<meta charset="utf-8" />
 	<script class="redirect">location.replace('/#userstyles');</script>
     <script class="exec">
-        var duoshuoQuery = { short_name: "firefoxbar" };
-        (function(){
-            if (typeof fxb === "undefined") return;
-            var links = document.querySelector("#links-wrap");
-            fxb.ajax('http://firefox8-team.stor.sinaapp.com/template/json/links.json?_r='+Math.random(),
-            function(e) {
-                var rt = JSON.parse(this.responseText);
-                var html = "";
-                rt.forEach(function(i) {
-                    var cate = "<section class='links-cate'><h2>" + i.category + "</h2>";
-                    var linkList = i.links;
-                    var linkHTML = "";
-                    linkList.forEach(function(j){
-                        linkHTML = linkHTML + ("<li><a href='" + j.url + "' target='_blank'>" + j.name + "</a></li>");
-                    });
-                    linkHTML = "<ul>" +linkHTML+ "</ul></section>";
-                    html += cate + linkHTML;
-                });
-                links.innerHTML = html;
-            });           
-            document.querySelector(".submit").addEventListener("click",function(){
-                this.style.display = "none";
-                if ("undefined" === typeof DUOSHUO) {
-                    var ds = document.createElement('script');
-                    ds.async = true;
-                    ds.src = '//static.duoshuo.com/embed.js';
-                    ds.charset = 'UTF-8';
-                    return document.head.appendChild(ds);
-                } 
-                DUOSHUO.EmbedThread(document.querySelector(".ds-thread"));                             
-            });
-        })();
+		var duoshuoQuery = { short_name: "firefoxbar" };
+		(function() {
+			if (typeof fxb === "undefined") return;
+			var links = document.querySelector("#links-wrap");
+			fxb.loading(true);
+			fxb.ajax('http://firefox8-team.stor.sinaapp.com/template/json/links.json?_r=' + Math.random(),
+			function(e) {
+				fxb.loading(false);
+				var rt = JSON.parse(this.responseText);
+				var html = "";
+				rt.forEach(function(i) {
+					var cate = "<section class='links-cate'><h2>" + i.category + "</h2>";
+					var linkList = i.links;
+					var linkHTML = "";
+					linkList.forEach(function(j) {
+						linkHTML = linkHTML + ("<li><a href='" + j.url + "' target='_blank'>" + j.name + "</a></li>");
+					});
+					linkHTML = "<ul>" + linkHTML + "</ul></section>";
+					html += cate + linkHTML;
+				});
+				links.innerHTML = html;
+			});
+			document.querySelector(".submit").addEventListener("click",
+			function() {
+				this.style.display = "none";
+				if ("undefined" === typeof DUOSHUO) {
+					var ds = document.createElement('script');
+					ds.async = true;
+					ds.src = '//static.duoshuo.com/embed.js';
+					ds.charset = 'UTF-8';
+					return document.head.appendChild(ds);
+				}
+				DUOSHUO.EmbedThread(document.querySelector(".ds-thread"));
+			});
+		})();
     </script>
 </head>
 <body>
 	<div id="links-wrap"></div>
-    <a class='submit button'>我要提交</a>
+    <a class="submit button">我要提交</a>
     <div class="ds-thread" data-thread-key="links" data-title="外部链接" data-url="http://firefoxbar.github.io/#links"></div>
 </body>
 </html>
