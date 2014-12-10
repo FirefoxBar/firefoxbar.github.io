@@ -219,21 +219,25 @@ a {
   border-bottom: 1px solid #e2e2e2;
 }
 
-.us-list table {
+.item-list table, .us-list table {
   width: 100%;
   margin: 20px 0;
 }
 
-.us-list table th {
+.item-list table th, .us-list table th {
   text-align: center;
 }
 
-.us-list table td {
+.item-list table td, .us-list table td {
   padding: 5px 0;
 }
 
-.us-list table tr:nth-child(2n+1) {
+.item-list table tr:nth-child(2n+1), .us-list table tr:nth-child(2n+1) {
   background-color: #e2e2e2;
+}
+
+.item-list tr td:nth-child(1), .item-list tr td:nth-child(2) {
+  min-width: 40%;
 }
 
 .us-list tr td:nth-child(4) {

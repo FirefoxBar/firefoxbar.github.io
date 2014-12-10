@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>翻译协作 - Firefox 吧项目组</title>
+  <meta charset="utf-8" />
+  <script class="redirect">location.replace('/#translation');</script>
+  <script class="exec">
+    (function() {
+		if (typeof fxb === "undefined") return;
+
+		var hrefJSON = "https://raw.githubusercontent.com/FirefoxBar/translation/master/translation.json";
+		var list = document.querySelector(".item-list table tbody");
+
+        fxb.loading(true);
+		fxb.ajax(hrefJSON + "?_r="+Math.random(),
+		function(e) {
+            fxb.loading(false);
+            var manifest = JSON.parse(this.responseText);
+			var html = "<tr><th>英文</th><th>中文</th><th>状态</th><th>主编</th></tr>";
+			manifest.forEach(function(item){
+				html += "<tr>" + 
+                "<td><a href='" + item.enURL + "' target='_blank'>" + item.enTitle + "</a></td>" +
+				"<td><a href='" + item.cnURL + "' target='_blank'>" + item.cnTitle + "</a></td>" +
+				"<td>" + item.status + "</td>" +
+				"<td>" + item.editor + "</td>" +
+				"</tr>";
+			});
+			list.innerHTML = html;
+        });
+
+	})();
+  </script>  
+</head>
+<body>
+  <div>
+    <h2>翻译协作</h2>
+    <p>希望能通过众人协作翻译丰富火狐的中文资料。</p>
+	<p>翻译材料来源包括但不限于 <a href="https://developer.mozilla.org/" target="_blank">MDN</a>。</p>
+    <p>可自由认领翻译文章，无特殊偏好者也可与项目组成员讨论以决定标的。</p>
+	<p>成果列出于下表：</p>
+	<div class="item-list">
+		<table><tbody></tbody></table>
+	</div>
+  </div>
+</body>
+</html>
