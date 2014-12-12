@@ -16,7 +16,7 @@
 		function(e) {
             fxb.loading(false);
             var manifest = JSON.parse(this.responseText);
-			var html = "<tr><th>英文</th><th>中文</th><th>状态</th><th>主编</th></tr>";
+			var html = "<tr><th>英文</th><th>中文</th><th>来自</th><th>状态</th><th>主编</th></tr>";
 			manifest.forEach(function(item){ //TODO
 				item.list.forEach(function(oneitem){
 					if (oneitem.is_markdown) {
@@ -25,6 +25,7 @@
 						html += "<tr>" + 
 						"<td><a href='" + oneitem.enURL + "' target='_blank'>" + oneitem.enTitle + "</a></td>" +
 						"<td><a href='" + oneitem.cnURL + "' target='_blank'>" + oneitem.cnTitle + "</a></td>" +
+						"<td>" + oneitem.from + "</td>" +
 						"<td>" + oneitem.status + "</td>" +
 						"<td>" + oneitem.editor + "</td>" +
 						"</tr>";
