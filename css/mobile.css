@@ -67,3 +67,6 @@ html{
     float: none;
     width: auto;
 }
+.install-btns {
+	min-width: 30px;
+}

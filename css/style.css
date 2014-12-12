@@ -219,6 +219,10 @@ a {
   border-bottom: 1px solid #e2e2e2;
 }
 
+.item-list td{
+    text-align: center;
+}
+
 .item-list table, .us-list table {
   width: 100%;
   margin: 20px 0;
@@ -237,7 +241,7 @@ a {
 }
 
 .item-list tr td:nth-child(1), .item-list tr td:nth-child(2) {
-  min-width: 40%;
+  min-width: 35%;
 }
 
 .us-list tr td:nth-child(4) {
@@ -291,7 +295,7 @@ a {
     margin: 0 auto;
 }
 .install-btns {
-	width: 200px;
+	min-width: 200px;
 }
 
 /* 针对蜘蛛 */
