@@ -18,7 +18,7 @@
             var manifest = JSON.parse(this.responseText);
 			var html = "<tr><th>英文</th><th>中文</th><th>状态</th><th>主编</th></tr>";
 			manifest.forEach(function(item){ //TODO
-				item.list.forEach(function(oneitem)){
+				item.list.forEach(function(oneitem){
 					if (oneitem.is_markdown) {
 						
 					} else {
