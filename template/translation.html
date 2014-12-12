@@ -8,7 +8,7 @@
     (function() {
 		if (typeof fxb === "undefined") return;
 
-		var hrefJSON = "http://firefox8-team.stor.sinaapp.com/json/translation.json";
+		var hrefJSON = "http://firefox8-translation.stor.sinaapp.com/translation.json";
 		var list = document.querySelector(".item-list table tbody");
 
         fxb.loading(true);
@@ -17,13 +17,19 @@
             fxb.loading(false);
             var manifest = JSON.parse(this.responseText);
 			var html = "<tr><th>英文</th><th>中文</th><th>状态</th><th>主编</th></tr>";
-			manifest.forEach(function(item){
-				html += "<tr>" + 
-                "<td><a href='" + item.enURL + "' target='_blank'>" + item.enTitle + "</a></td>" +
-				"<td><a href='" + item.cnURL + "' target='_blank'>" + item.cnTitle + "</a></td>" +
-				"<td>" + item.status + "</td>" +
-				"<td>" + item.editor + "</td>" +
-				"</tr>";
+			manifest.forEach(function(item){ //TODO
+				item.list.forEach(function(oneitem)){
+					if (oneitem.is_markdown) {
+						
+					} else {
+						html += "<tr>" + 
+						"<td><a href='" + oneitem.enURL + "' target='_blank'>" + oneitem.enTitle + "</a></td>" +
+						"<td><a href='" + oneitem.cnURL + "' target='_blank'>" + oneitem.cnTitle + "</a></td>" +
+						"<td>" + oneitem.status + "</td>" +
+						"<td>" + oneitem.editor + "</td>" +
+						"</tr>";
+					}
+				}
 			});
 			list.innerHTML = html;
         });
