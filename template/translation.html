@@ -44,12 +44,12 @@
 			menu.innerHTML = html_menu;
 			var show_menu = menu.querySelectorAll(".show-tab");
             Array.prototype.forEach.call(show_menu,function(i){
-                //i.addEventListener("click",getContent,false);
                 i.addEventListener("click",showTab,false);
             });
 			show_menu[0].click();
 			var show_markdown = list.querySelector('.view-markdown');
-			Array.prototype.forEach.call(show_menu,function(i){
+			Array.prototype.forEach.call(show_markdown,function(i){
+				i.addEventListener("click",getContent,false);
             });
         });
 		
@@ -78,9 +78,9 @@
 		
 		function getContent(e){
             fxb.loading(true);
-            var path = e.target.previousSibling.href.slice(52);
+            var path = e.target.getAttribute('data-name');
             setTimeout(function(){
-                fxb.ajax("http://firefox8-translation.stor.sinaapp.com/" + path + "&_r="+Math.random(),
+                fxb.ajax("http://firefox8-translation.stor.sinaapp.com/" + path + "?_r="+Math.random(),
                 function() {
                     fxb.loading(false);
                     var content = this.responseText;
