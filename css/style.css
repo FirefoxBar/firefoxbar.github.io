@@ -302,3 +302,31 @@ a {
 #spider {
 	display: none;
 }
+
+/*标签 */
+.tabs {
+	display:block;
+	margin:0;
+}
+
+.item-list table {
+	margin-top:0;
+}
+
+.tabs li {
+	display:inline-block;
+	list-style:none;
+}
+
+.tabs a {
+	display:block;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	background-color:rgb(226, 226, 226);
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.tabs a.active {
+	background-color:rgb(248, 248, 248);
+}
