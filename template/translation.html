@@ -19,32 +19,25 @@
 		function(e) {
             fxb.loading(false);
             var manifest = JSON.parse(this.responseText);
-			var html = "<tr><th>英文</th><th>中文</th><th>来自</th><th>状态</th><th>主编</th></tr>";
+			var html = "<tr><th>查看</th><th>标题</th><th>来自</th><th>状态</th><th>主编</th></tr>";
 			var html_menu = '';
 			manifest.forEach(function(item){ //TODO
 				html_menu += '<li><a class="show-tab" data-short="' + item.short_name + '">' + item.name + '</a></li>';
 				item.list.forEach(function(oneitem){
+					html += "<tr class='tab_item tab_" + item.short_name + "' style='display:none'>";
 					if (oneitem.is_markdown) { //Markdown
-						html += "<tr class='tab_item tab_" + item.short_name + "'>" +
-						"<td><a class='button' href='" + oneitem.enURL + "' target='_blank'>查看原文</a>" +
-						"<a class='view-markdown button' data-name='" + oneitem.cnURL + "'>查看译文</a></td>" +
-						"<td><p>" + oneitem.cnTitle + "</p></td>" +
-						"<td><p>" + oneitem.enTitle + "</p></td>" +
-						"<td>" + oneitem.from + "</td>" +
-						"<td>" + oneitem.status + "</td>" +
-						"<td>" + oneitem.editor + "</td>" +
-						"</tr>";
+						html += "<td><a class='button' href='" + oneitem.enURL + "' target='_blank'>原文</a>" +
+							"<a class='view-markdown button' data-name='" + oneitem.cnURL + "'>译文</a></td>";
 					} else {
-						html += "<tr class='tab_item tab_" + item.short_name + "'>" +
-						"<td><a class='button' href='" + oneitem.enURL + "' target='_blank'>查看原文</a>" +
-						"<a class='button' href='" + oneitem.cnURL + "' target='_blank'>查看译文</a></td>" +
-						"<td><p>" + oneitem.cnTitle + "</p></td>" +
-						"<td><p>" + oneitem.enTitle + "</p></td>" +
+						html += "<td><a class='button' href='" + oneitem.enURL + "' target='_blank'>原文</a>" +
+							"<a class='button' href='" + oneitem.cnURL + "' target='_blank'>译文</a></td>";
+					}
+					html +=  "<td><p>" + oneitem.cnTitle + "</p>" +
+						"<p>" + oneitem.enTitle + "</p></td>" +
 						"<td>" + oneitem.from + "</td>" +
 						"<td>" + oneitem.status + "</td>" +
 						"<td>" + oneitem.editor + "</td>" +
 						"</tr>";
-					}
 				});
 			});
 			list.innerHTML = html;
@@ -69,11 +62,16 @@
 			var short_name = e.target.getAttribute('data-short');
 			var now_show = list.querySelectorAll('.shown');
 			var go_show = list.querySelectorAll('.tab_' + short_name);
+			var shown_btn = menu.querySelector('.active');
+			shown_btn && shown_btn.classList.remove('active');
+			e.target.classList.add('active');
 			Array.prototype.forEach.call(now_show,function(i){
                 i.style.display = 'none';
+				i.classList.remove("shown");
             });
 			Array.prototype.forEach.call(go_show,function(i){
                 i.style.display = 'table-row';
+				i.classList.add("shown");
             });
 		}
 		
@@ -104,7 +102,7 @@
 		<p>可自由认领翻译文章，无特殊偏好者也可与项目组成员讨论以决定标的。</p>
 		<p>成果列出于下表：</p>
 		<div class="item-list">
-			<ul></ul>
+			<ul class="tabs"></ul>
 			<table><tbody></tbody></table>
 		</div>
 	</div>
