@@ -1,38 +1,38 @@
 html{
-  min-width: 320px;
+    min-width: 320px;
 }
 #categories {
-  background-image: none;
-  height: auto;
-  min-height: 60px;
-  top: 0;
-  width: 100%;
-  z-index: 10086;
+    background-image: none;
+    height: auto;
+    min-height: 60px;
+    top: 0;
+    width: 100%;
+    z-index: 10086;
 }
 .head {
-  height: 60px;
-  margin: 0;
-  text-align: left;
+    height: 60px;
+    margin: 0;
+    text-align: left;
 }
 #logo {
-  width: 40px;
-  height: 40px;
-  margin-left: 5%;
-  position: absolute;
-  margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    margin-left: 5%;
+    position: absolute;
+    margin-top: 10px;
 }
 #logo img{
     width: 40px;
     height: 40px;
 }
 .z{
-  display: none;
+    display: none;
 }
 #categories h1 {
-  font-size: 1.5em;
-  margin: 0;
-  line-height: 60px;
-  text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 60px;
+    text-align: center;
 }
 #menu{
     display: block;
@@ -51,16 +51,16 @@ html{
     background: #54616c;
 }
 #nav li a {
-  text-shadow: none;
+    text-shadow: none;
 }
 #main {
-  padding: 70px 3% 3%;
+    padding: 70px 3% 3%;
 }
 #main .button.view-source,#main .button.installer{
     display: none;
 }
 #main .button {
-  min-width: 40px;
+    min-width: 40px;
 }
 .links-cate li{
     display: block;
