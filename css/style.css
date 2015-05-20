@@ -185,9 +185,7 @@ a {
 	height: 90px;
 	overflow: hidden;
 	margin: 10px;
-	border-radius: 50%;
-	border: 4px solid;
-	border-color: #fcb34d #f6822f #f6822f #fcb34d;
+	border-radius: 5px;
 }
 
 #main .menber-list li a {
@@ -201,11 +199,11 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgba(66,79,90,0.5);
+	background-color: rgba(255,149,0,0.5);
 	width: 90px;
 	height: 90px;
 	display: none;
-	border-radius: 50%;
+	border-radius: 5px;
 }
 
 .menber-list li:hover p {
