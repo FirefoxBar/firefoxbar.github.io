@@ -188,6 +188,11 @@ a {
 	border-radius: 5px;
 }
 
+.menber-list li img{
+    width: 90px;
+    height: 90px;
+}
+
 #main .menber-list li a {
 	color: #ffffff;
 	display: inline-block;
@@ -199,7 +204,7 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgba(255,149,0,0.5);
+	background-color: rgba(0,0,0,0.5);
 	width: 90px;
 	height: 90px;
 	display: none;
