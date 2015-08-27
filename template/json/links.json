@@ -4,7 +4,7 @@
         "links": [
             {
                 "name": "FTP",
-                "url": "ftp://ftp.mozilla.org/pub/firefox/"
+                "url": "http://ftp.mozilla.org/pub/firefox/"
             },
             {
                 "name": "国际中文版",
