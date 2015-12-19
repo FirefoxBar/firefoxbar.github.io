@@ -237,7 +237,7 @@ a {
 }
 
 .item-list table td, .us-list table td {
-	padding: 5px 2px 5px;
+	padding: 5px 2px 0 2px;
 }
 
 .item-list table tr:nth-child(2n+1), .us-list table tr:nth-child(2n+1) {
@@ -340,29 +340,4 @@ a {
 
 .tabs a.active {
 	background-color: rgb(248, 248, 248);
-}
-
-.add-on-list{
-	padding-top: 20px;
-}
-
-.add-on-list li{
-	position: relative;
-	padding: 10px 0 15px 80px;
-	border-bottom: 1px solid #e2e2e2;
-}
-.add-on-list li img{
-	position: absolute;
-	width: 55px;
-	height: 55px;
-	top: 8px;
-	left: 0;
-}
-#main .add-on-list li a:hover{
-	color: #F35E1E;
-}
-.add-on-list li p{
-	color: #999999;
-	font-size:12px;
-	
 }

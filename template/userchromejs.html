@@ -10,7 +10,7 @@
               
         if (typeof Prism === "undefined"){
             var s = document.createElement('script');
-            s.src = 'js/prism.js';
+            s.src = 'http://firefox8-team.stor.sinaapp.com/js/prism.js';
             s.onload = function(){
                 Prism.hooks.add('after-highlight', function (env) {
                     var linesNum = (1 + env.code.split('\n').length);
@@ -36,7 +36,7 @@
         var cps = document.querySelector("#collapsing");
         
         fxb.loading(true);
-		fxb.ajax("https://raw.githubusercontent.com/FirefoxBar/userchromeJS/master/userChromeJS.json",
+		fxb.ajax("http://firefox8-team.stor.sinaapp.com/json/userChromeJS.json?_r="+Math.random(),
 		function(e) {
             fxb.loading(false);
             var userscripts = JSON.parse(this.responseText);
@@ -68,7 +68,7 @@
             var path = e.target.previousSibling.href.slice(54);
             setTimeout(function(){
                 fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+"?client_id="+
-                fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
+                fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret+"&_r="+Math.random(),
                 function() {
                     fxb.loading(false);
                     var content = JSON.parse(this.responseText).content;

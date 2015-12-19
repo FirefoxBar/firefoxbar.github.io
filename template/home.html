@@ -9,7 +9,7 @@
 	(function() {
 		if (typeof fxb === "undefined") return;
 		var list = document.querySelector(".menber-list");
-		fxb.ajax('https://raw.githubusercontent.com/FirefoxBar/firefoxbar.github.io/master/template/json/people.json',
+		fxb.ajax('http://firefox8-team.stor.sinaapp.com/template/json/people.json?_r='+Math.random(),
 		function(e) {
 			var rt = JSON.parse(this.responseText);
 			var html = "";
@@ -48,5 +48,6 @@
 		<h2>我要吐槽（╯‵□′）╯︵┴─┴ </h2>
 		<div class="ds-thread" data-thread-key="home" data-title="Firefox 吧项目组" data-url="http://firefoxbar.github.io"></div>
 	</div>
+	<script>(function(){if("undefined"===typeof DUOSHUO){var ds=document.createElement("script");ds.async=true;ds.src="//static.duoshuo.com/embed.js";ds.charset="UTF-8";return document.head.appendChild(ds)}DUOSHUO.EmbedThread(document.querySelector(".ds-thread"))})();</script>
 </body>
 </html>
