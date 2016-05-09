@@ -26,11 +26,11 @@
 				item.list.forEach(function(oneitem){
 					html += "<tr class='tab_item tab_" + item.short_name + "' style='display:none'>";
 					if (oneitem.is_markdown) { //Markdown
-						html += "<td><a class='button' href='" + oneitem.enURL + "' target='_blank'>原文</a>" +
-							"<a class='view-markdown button' data-name='" + oneitem.cnURL + "'>译文</a></td>";
+						html += "<td><a class='button' href='" + oneitem.enURL + "' target='_blank'><i class='iconfont icon-fromUrl'></i></a>" +
+							"<a class='view-markdown button' data-name='" + oneitem.cnURL + "'><i class='iconfont icon-translate'></i></a></td>";
 					} else {
-						html += "<td><a class='button' href='" + oneitem.enURL + "' target='_blank'>原文</a>" +
-							"<a class='button' href='" + oneitem.cnURL + "' target='_blank'>译文</a></td>";
+						html += "<td><a class='button' href='" + oneitem.enURL + "' target='_blank'><i class='iconfont icon-fromUrl'></i></a>" +
+							"<a class='button' href='" + oneitem.cnURL + "' target='_blank'><i class='iconfont icon-translate'></i></a></td>";
 					}
 					html +=  "<td><p>" + oneitem.cnTitle + "</p>" +
 						"<p>" + oneitem.enTitle + "</p></td>" +

@@ -43,7 +43,7 @@
 			var html = "";
 			userscripts.forEach(function(i) {
 				html += "<tr>" + "<td class='install-btns'><a class='installer button' href='" +
-                i.installURL + "'>安装</a><a class='view-source button'>源码</a><a class='download button'>下载</a></td>" + 
+                i.installURL + "'><i class='iconfont icon-install'></i></a><a class='view-source button'><i class='iconfont icon-source'></i></a><a class='download button'><i class='iconfont icon-download'></i></a></td>" + 
                 "<td><a href='" + i.homepageURL + "' target='_blank'>" +
                 i.name + "</a></td>" + "<td>" + i.version + "</td>" + "<td>" + i.description + "</td>" + "</tr>";
 			});
