@@ -85,7 +85,7 @@
             target = e.target;
             if(target.getAttribute("download")) return;
             fxb.loading(true);
-            var path = target.previousSibling.previousSibling.href.slice(54);
+            var path = e.target.previousSibling.previousSibling.href.slice(54);
             fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+
             "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
             function() {
