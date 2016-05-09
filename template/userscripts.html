@@ -10,7 +10,7 @@
         
         if (typeof Prism === "undefined"){
             var s = document.createElement('script');
-            s.src = 'js/prism.js';
+            s.src = 'assets/vendor/js/prism.js';
             s.onload = function(){
                 Prism.hooks.add('after-highlight', function (env) {
                     var linesNum = (1 + env.code.split('\n').length);
@@ -130,6 +130,6 @@
 			<li>163 Music HTML5 Player：网易云音乐HTML5播放器</li>
 		</ul>
 	</div>
-    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="assets/vendor/css/prism.css">
 </body>
 </html>

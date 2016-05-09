@@ -11,8 +11,8 @@
 				logo: document.querySelector("#logo"),
 				loading: document.querySelector("#loading"),
                 menu: document.querySelector("#menu")
-			},
-		}
+			}
+		};
 	})();
 
 	fxb.loading = function(loading) {
@@ -21,9 +21,7 @@
 
     fxb.menu = function(){
         function toggleMenu(){
-            fxb.conf.dom.nav.classList.contains("ex") ?
-            fxb.conf.dom.nav.classList.remove("ex") :
-            fxb.conf.dom.nav.classList.add("ex");
+            fxb.conf.dom.nav.classList.contains("ex") ? fxb.conf.dom.nav.classList.remove("ex") : fxb.conf.dom.nav.classList.add("ex");
         }
         fxb.conf.dom.menu.addEventListener("click",function(){
             toggleMenu();
@@ -31,7 +29,7 @@
         fxb.conf.dom.nav.addEventListener("click",function(){
             toggleMenu();            
         },false);     
-    }
+    };
     
 	fxb.ajax = function(details, onload) {
 
@@ -53,17 +51,16 @@
 					if (details.onerror) details.onerror.call(xhr);
 				}
 			}
-		}
+		};
 		xhr.open(details.method, details.url, true);
 		xhr.responseType = "text";
 		xhr.send(details.body);
-	}
+	};
 
 	fxb.link = function() {
 		var n = fxb.conf.dom.nav.querySelectorAll("a");
 		var events = ["mousedown", "focus", "touchstart"];
-		for (var i = 0,
-		l = n.length; i < l; i++)(function(a) {
+		var forAction = function(a) {
 			var updateLink = function() {
 				a.href = a.href.replace(/^.*\/([^\/]*)\.html/, "#$1");               
 				events.forEach(function(e) {
@@ -73,7 +70,10 @@
 			events.forEach(function(e) {
 				a.addEventListener(e, updateLink);
 			});
-		} (n[i]));
+		};
+		for (var i = 0, l = n.length; i < l; i++) {
+			forAction(n[i]);
+		}
 	};
 
 	fxb.nav = function() {
@@ -120,7 +120,7 @@
 		window.addEventListener("hashchange", fxb.load);
 		fxb.link();
         fxb.menu();
-	}
+	};
 
 	window.fxb = fxb;
 	fxb.init();

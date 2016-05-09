@@ -16,10 +16,14 @@ gulp.task('style', function() {
 });
 gulp.task('js', function() {
 	gulp.src([
-		'assets/js/*.js',
+		'assets/js/core.js',
 	])
 	.pipe(jshint())
 	.pipe(jshint.reporter('default'))
 	.pipe(uglify())
+	.pipe(gulp.dest('assets/vendor/js'));
+	gulp.src([
+		'assets/js/prism.js',
+	])
 	.pipe(gulp.dest('assets/vendor/js'));
 });

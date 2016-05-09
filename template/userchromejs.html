@@ -10,7 +10,7 @@
               
         if (typeof Prism === "undefined"){
             var s = document.createElement('script');
-            s.src = 'js/prism.js';
+            s.src = 'assets/vendor/js/prism.js';
             s.onload = function(){
                 Prism.hooks.add('after-highlight', function (env) {
                     var linesNum = (1 + env.code.split('\n').length);
@@ -119,6 +119,6 @@
         </div>
         <div id="collapsing" title="关闭代码"></div>
 	</div>
-    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="assets/vendor/css/prism.css">
 </body>
 </html>
