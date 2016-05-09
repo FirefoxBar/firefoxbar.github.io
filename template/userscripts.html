@@ -82,9 +82,10 @@
         }
         
         function download(e){
-            if (this.getAttribute("download")) return;
+			var _this = this;
+            if (_this.getAttribute("download")) return;
             fxb.loading(true);
-            var path = this.previousSibling.previousSibling.href.slice(52);
+            var path = _this.previousSibling.previousSibling.href.slice(52);
             fxb.ajax("https://api.github.com/repos/FirefoxBar/userscript/contents/"+path+
             "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
             function() {
@@ -96,9 +97,9 @@
                 evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, 
                 false, false, false, false, 0, null);
                 evt.initEvent("click", false, false);
-                this.download = path.slice(path.indexOf("/") + 1);
-                this.href = URL.createObjectURL(blob);
-                this.dispatchEvent(evt);
+                _this.download = path.slice(path.indexOf("/") + 1);
+                _this.href = URL.createObjectURL(blob);
+                _this.dispatchEvent(evt);
             });      
         }
 	})();

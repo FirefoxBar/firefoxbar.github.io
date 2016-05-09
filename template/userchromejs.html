@@ -82,9 +82,10 @@
         }
         
         function download(){
-            if (this.getAttribute("download")) return;
+			var _this = this;
+            if (_this.getAttribute("download")) return;
             fxb.loading(true);
-            var path = this.previousSibling.previousSibling.href.slice(54);
+            var path = _this.previousSibling.previousSibling.href.slice(54);
             fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+
             "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
             function() {
@@ -93,12 +94,11 @@
                 var sourceCode = decodeURIComponent(escape(atob(content)));
                 var blob = new Blob([sourceCode]);
                 var evt = document.createEvent("MouseEvents");
-                evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, 
-                false, false, false, false, 0, null);
+                evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
                 evt.initEvent("click", false, false);
-                this.download = path.slice(path.indexOf("/") + 1);
-                this.href = URL.createObjectURL(blob);
-                this.dispatchEvent(evt);
+                _this.download = path.slice(path.indexOf("/") + 1);
+                _this.href = URL.createObjectURL(blob);
+                _this.dispatchEvent(evt);
             });      
         }
 	})();

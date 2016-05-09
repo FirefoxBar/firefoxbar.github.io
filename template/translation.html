@@ -76,9 +76,9 @@
             });
 		}
 		
-		function getContent(e){
+		function getContent(){
             fxb.loading(true);
-            var path = e.target.getAttribute('data-name');
+            var path = this.getAttribute('data-name');
             setTimeout(function(){
                 fxb.ajax("https://raw.githubusercontent.com/FirefoxBar/translation/master/" + path + "?_r="+Math.random(),
                 function() {
