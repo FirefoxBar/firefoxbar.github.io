@@ -41,7 +41,11 @@ html{
     top: 0;
     width: 60px;
     height: 60px;
-    background: url("../img/menu.png") no-repeat scroll right center;
+    line-height: 60px;
+	text-align: center;
+}
+#menu .iconfont {
+	font-size: 30px;
 }
 #nav{
     display: none;
