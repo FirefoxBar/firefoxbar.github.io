@@ -1,0 +1,27 @@
+{
+  "name": "firefoxbar.github.io",
+  "version": "1.0.0",
+  "description": "firefoxbar.github.io",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"no\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FirefoxBar/firefoxbar.github.io.git"
+  },
+  "author": "FirefoxBar",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.6",
+    "gulp-jshint": "^2.0.0",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.1"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/FirefoxBar/firefoxbar.github.io/issues"
+  },
+  "homepage": "https://github.com/FirefoxBar/firefoxbar.github.io#readme"
+}
