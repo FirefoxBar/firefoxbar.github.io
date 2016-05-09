@@ -306,6 +306,7 @@ a {
 	outline: thin dotted;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
+	color: #FFF;
 }
 #main .button:hover,
 #main .button:focus {
@@ -313,6 +314,7 @@ a {
 	text-decoration: none;
 	background-color: #286090;
 	border-color: #204d74;
+	color: #FFF;
 }
 #main .button:active {
 	background-image: none;
