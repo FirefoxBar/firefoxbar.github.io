@@ -48,11 +48,11 @@
                 i.name + "</a></td>" + "<td>" + i.version + "</td>" + "<td>" + i.description + "</td>" + "</tr>";
 			});
 			list.innerHTML = html;
-            var vs = document.querySelectorAll(".view-source");
+            var vs = document.querySelectorAll("a.view-source");
             Array.prototype.forEach.call(vs,function(i){
                 i.addEventListener("click",getSource,false);
             });
-            var dl = document.querySelectorAll(".download");
+            var dl = document.querySelectorAll("a.download");
             Array.prototype.forEach.call(dl,function(i){
                 i.addEventListener("click",download,false);
             });
@@ -63,9 +63,9 @@
             cps.style.display = "none";
         },false);
         
-        function getSource(e){
+        function getSource(){
             fxb.loading(true);
-            var path = e.target.previousSibling.href.slice(54);
+            var path = this.previousSibling.href.slice(54);
             setTimeout(function(){
                 fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+"?client_id="+
                 fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
@@ -81,11 +81,10 @@
             cps.style.display = "block";            
         }
         
-        function download(e){
-            target = e.target;
-            if(target.getAttribute("download")) return;
+        function download(){
+            if (this.getAttribute("download")) return;
             fxb.loading(true);
-            var path = e.target.previousSibling.previousSibling.href.slice(54);
+            var path = this.previousSibling.previousSibling.href.slice(54);
             fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+
             "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
             function() {
@@ -97,9 +96,9 @@
                 evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, 
                 false, false, false, false, 0, null);
                 evt.initEvent("click", false, false);
-                target.download = path.slice(path.indexOf("/") + 1);
-                target.href = URL.createObjectURL(blob);
-                target.dispatchEvent(evt);
+                this.download = path.slice(path.indexOf("/") + 1);
+                this.href = URL.createObjectURL(blob);
+                this.dispatchEvent(evt);
             });      
         }
 	})();
