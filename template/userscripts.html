@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>用户脚本 - Firefox 吧项目组</title>
@@ -10,7 +10,7 @@
         
         if (typeof Prism === "undefined"){
             var s = document.createElement('script');
-            s.src = 'assets/vendor/js/prism.js';
+            s.src = '/assets/vendor/js/prism.js';
             s.onload = function(){
                 Prism.hooks.add('after-highlight', function (env) {
                     var linesNum = (1 + env.code.split('\n').length);
@@ -67,8 +67,7 @@
             fxb.loading(true);
             var path = this.previousSibling.href.slice(52);
             setTimeout(function(){
-                fxb.ajax("https://api.github.com/repos/FirefoxBar/userscript/contents/"+path+
-                "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
+                fxb.ajax("https://raw.githubusercontent.com/FirefoxBar/userscript/master/" + path + "?_r=" + Math.random(),
                 function() {
                     fxb.loading(false);
                     var content = JSON.parse(this.responseText).content;

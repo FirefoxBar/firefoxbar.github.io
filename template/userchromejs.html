@@ -67,8 +67,7 @@
             fxb.loading(true);
             var path = this.previousSibling.href.slice(54);
             setTimeout(function(){
-                fxb.ajax("https://api.github.com/repos/FirefoxBar/userChromeJS/contents/"+path+"?client_id="+
-                fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
+                fxb.ajax("https://raw.githubusercontent.com/FirefoxBar/userChromeJS/master/" + path + "?_r=" + Math.random(),
                 function() {
                     fxb.loading(false);
                     var content = JSON.parse(this.responseText).content;
