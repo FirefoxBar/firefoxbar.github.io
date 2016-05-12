@@ -9,7 +9,7 @@
 	(function() {
 		if (typeof fxb === "undefined") return;
 		var list = document.querySelector(".menber-list");
-		fxb.ajax('https://raw.githubusercontent.com/FirefoxBar/firefoxbar.github.io/master/template/json/people.json',
+		fxb.ajax('/template/json/people.json',
 		function(e) {
 			var rt = JSON.parse(this.responseText);
 			var html = "";

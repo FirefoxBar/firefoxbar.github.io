@@ -10,7 +10,7 @@
 			if (typeof fxb === "undefined") return;
 			var links = document.querySelector("#links-wrap");
 			fxb.loading(true);
-			fxb.ajax('https://raw.githubusercontent.com/FirefoxBar/firefoxbar.github.io/master/template/json/links.json',
+			fxb.ajax('/template/json/links.json',
 			function(e) {
 				fxb.loading(false);
 				var rt = JSON.parse(this.responseText);
