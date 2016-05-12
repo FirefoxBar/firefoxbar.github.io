@@ -2,15 +2,13 @@
 	var fxb = {};
 	fxb.conf = (function() {
 		return {
-            clientID: "89dcce1a589176e7b4c2",
-            clientSecret: "d1e5b29533f84ee8d4b37bca64ad07f76178ad73",
 			template: "template",
 			dom: {
 				main: document.querySelector("#main"),
 				nav: document.querySelector("#nav"),
 				logo: document.querySelector("#logo"),
 				loading: document.querySelector("#loading"),
-                menu: document.querySelector("#menu")
+				menu: document.querySelector("#menu")
 			}
 		};
 	})();
@@ -19,18 +17,18 @@
 		fxb.conf.dom.loading.style.display = loading ? "block": "none";
 	};
 
-    fxb.menu = function(){
-        function toggleMenu(){
-            fxb.conf.dom.nav.classList.contains("ex") ? fxb.conf.dom.nav.classList.remove("ex") : fxb.conf.dom.nav.classList.add("ex");
-        }
-        fxb.conf.dom.menu.addEventListener("click",function(){
-            toggleMenu();
-        },false);
-        fxb.conf.dom.nav.addEventListener("click",function(){
-            toggleMenu();            
-        },false);     
-    };
-    
+	fxb.menu = function(){
+		function toggleMenu(){
+			fxb.conf.dom.nav.classList.contains("ex") ? fxb.conf.dom.nav.classList.remove("ex") : fxb.conf.dom.nav.classList.add("ex");
+		}
+		fxb.conf.dom.menu.addEventListener("click",function(){
+			toggleMenu();
+		},false);
+		fxb.conf.dom.nav.addEventListener("click",function(){
+			toggleMenu();
+		},false);
+	};
+
 	fxb.ajax = function(details, onload) {
 
 		if (typeof details === "string") details = {
@@ -62,7 +60,7 @@
 		var events = ["mousedown", "focus", "touchstart"];
 		var forAction = function(a) {
 			var updateLink = function() {
-				a.href = a.href.replace(/^.*\/([^\/]*)\.html/, "#$1");               
+				a.href = a.href.replace(/^.*\/([^\/]*)\.html/, "#$1");
 				events.forEach(function(e) {
 					a.removeEventListener(e, updateLink);
 				});
@@ -119,7 +117,7 @@
 		fxb.load();
 		window.addEventListener("hashchange", fxb.load);
 		fxb.link();
-        fxb.menu();
+		fxb.menu();
 	};
 
 	window.fxb = fxb;

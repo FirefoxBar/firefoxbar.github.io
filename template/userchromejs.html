@@ -70,8 +70,7 @@
                 fxb.ajax("https://raw.githubusercontent.com/FirefoxBar/userChromeJS/master/" + path + "?_r=" + Math.random(),
                 function() {
                     fxb.loading(false);
-                    var content = JSON.parse(this.responseText).content;
-                    var sourceCode = decodeURIComponent(escape(atob(content)));
+                    var sourceCode = this.responseText;
                     source.textContent = sourceCode;
                     Prism && Prism.highlightElement(source);   
                 }
@@ -89,8 +88,7 @@
             "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
             function() {
                 fxb.loading(false);
-                var content = JSON.parse(this.responseText).content;
-                var sourceCode = decodeURIComponent(escape(atob(content)));
+                var sourceCode = this.responseText;
                 var blob = new Blob([sourceCode]);
                 var evt = document.createEvent("MouseEvents");
                 evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);

@@ -70,10 +70,9 @@
                 fxb.ajax("https://raw.githubusercontent.com/FirefoxBar/userscript/master/" + path + "?_r=" + Math.random(),
                 function() {
                     fxb.loading(false);
-                    var content = JSON.parse(this.responseText).content;
-                    var sourceCode = decodeURIComponent(escape(atob(content)));
+                    var sourceCode = this.responseText;
                     source.textContent = sourceCode;
-                    Prism && Prism.highlightElement(source);   
+                    Prism && Prism.highlightElement(source);
                 }
             )},250);
             code.classList.add("expanding");
@@ -85,12 +84,10 @@
             if (_this.getAttribute("download")) return;
             fxb.loading(true);
             var path = _this.previousSibling.previousSibling.href.slice(52);
-            fxb.ajax("https://api.github.com/repos/FirefoxBar/userscript/contents/"+path+
-            "?client_id="+fxb.conf.clientID+"&client_secret="+fxb.conf.clientSecret,
+            fxb.ajax("https://raw.githubusercontent.com/FirefoxBar/userscript/master/" + path + "?_r=" + Math.random(),
             function() {
                 fxb.loading(false);
-                var content = JSON.parse(this.responseText).content;
-                var sourceCode = decodeURIComponent(escape(atob(content)));
+                var sourceCode = this.responseText;
                 var blob = new Blob([sourceCode]);
                 var evt = document.createEvent("MouseEvents");
                 evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, 
