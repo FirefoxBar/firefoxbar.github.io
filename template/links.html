@@ -3,6 +3,17 @@
 <head>
 	<title>外部资源 - Firefox 吧项目组</title>
 	<meta charset="utf-8">
+	<style>
+	.tips {
+		padding: 15px;
+		margin-bottom: 20px;
+		border: 1px solid #bce8f1;
+		border-radius: 4px;
+  		background-color: #d9edf7;
+ 		color: #31708f;
+		margin-bottom: 10px;
+	}
+	</style>
 	<script class="redirect">location.replace('/#userstyles');</script>
     <script class="exec">
 		var duoshuoQuery = { short_name: "firefoxbar" };
@@ -27,24 +38,11 @@
 				});
 				links.innerHTML = html;
 			});
-			document.querySelector(".submit").addEventListener("click",
-			function() {
-				this.style.display = "none";
-				if ("undefined" === typeof DUOSHUO) {
-					var ds = document.createElement('script');
-					ds.async = true;
-					ds.src = '//static.duoshuo.com/embed.js';
-					ds.charset = 'UTF-8';
-					return document.head.appendChild(ds);
-				}
-				DUOSHUO.EmbedThread(document.querySelector(".ds-thread"));
-			});
 		})();
     </script>
 </head>
 <body>
+	<div class="tips">提交链接请 Fork & Pull Request 到 https://github.com/FirefoxBar/firefoxbar.github.io/blob/master/template/json/links.json </div>
 	<div id="links-wrap"></div>
-    <a class="submit button">我要提交</a>
-    <div class="ds-thread" data-thread-key="links" data-title="外部链接" data-url="http://firefoxbar.github.io/#links"></div>
 </body>
 </html>
