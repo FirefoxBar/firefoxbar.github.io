@@ -42,8 +42,8 @@
             var userscripts = JSON.parse(this.responseText);
 			var html = "";
 			userscripts.forEach(function(i) {
-				html += "<tr>" + "<td class='install-btns'><a class='installer button' href='" +
-                i.installURL + "'><i class='iconfont icon-install'></i></a><a class='view-source button'><i class='iconfont icon-source'></i></a><a class='download button'><i class='iconfont icon-download'></i></a></td>" + 
+				html += "<tr>" + "<td class='install-btns'><a title='安装' class='installer button' href='" +
+                i.installURL + "'><i class='iconfont icon-install'></i></a><a title='查看源代码' class='view-source button'><i class='iconfont icon-source'></i></a><a title='下载' class='download button'><i class='iconfont icon-download'></i></a></td>" + 
                 "<td><a href='" + i.homepageURL + "' target='_blank'>" +
                 i.name + "</a></td>" + "<td>" + i.version + "</td>" + "<td>" + i.description + "</td>" + "</tr>";
 			});
