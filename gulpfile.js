@@ -1,29 +1,30 @@
-var gulp = require('gulp');
-var cssmin = require('gulp-clean-css');
-var jshint = require('gulp-jshint');
-var uglify = require('gulp-uglify');
+var gulp = require('gulp'),
+	cssmin = require('gulp-clean-css'),
+	uglify = require('gulp-uglify'),
+	rename = require('gulp-rename'),
+	autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('default',function() {
-	gulp.run('js');
-	gulp.run('style');
+gulp.task('default', function () {
+	gulp.watch('assets/css/*.css', ['css']);
+	gulp.watch('assets/js/core.js', ['minjs']);
 });
-gulp.task('style', function() {
+gulp.task('css', function() {
 	gulp.src([
 		'assets/css/*.css'
 	])
+	.pipe(autoprefixer({
+		browsers: ['last 3 versions', 'Android >= 4.0', 'iOS >= 9.0'],
+		cascade: true,
+		remove: true
+	}))
 	.pipe(cssmin())
 	.pipe(gulp.dest('assets/vendor/css'));
 });
-gulp.task('js', function() {
+gulp.task('minjs', function() {
 	gulp.src([
-		'assets/js/core.js',
+		'assets/js/core.js'
 	])
-	.pipe(jshint())
-	.pipe(jshint.reporter('default'))
-	.pipe(uglify())
-	.pipe(gulp.dest('assets/vendor/js'));
-	gulp.src([
-		'assets/js/prism.js',
-	])
-	.pipe(gulp.dest('assets/vendor/js'));
+    .pipe(uglify())
+	.pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('assets/vendor/js'));
 });
