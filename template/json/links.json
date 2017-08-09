@@ -3,28 +3,28 @@
         "category": "Firefox 下载",
         "links": [
             {
-                "name": "FTP",
-                "url": "http://ftp.mozilla.org/pub/firefox/"
+                "name": "国际官方FTP",
+                "url": "https://ftp.mozilla.org/pub/firefox/"
             },
             {
-                "name": "国际中文版",
-                "url": "http://www.mozilla.org/en-US/firefox/all/"
+                "name": "国际版(所有语言版本)",
+                "url": "https://www.mozilla.org/en-US/firefox/all/"
             },
             {
-                "name": "开发者版",
+                "name": "开发者版(已终止)",
                 "url": "https://www.mozilla.org/en-US/firefox/channel/#aurora"
             },
             {
-                "name": "Nightly版",
-                "url": "http://nightly.mozilla.org/"
+                "name": "Nightly(每夜)版",
+                "url": "https://nightly.mozilla.org/"
             },
             {
                 "name": "中国(谋智)版",
                 "url": "http://www.firefox.com.cn/"
             },
             {
-                "name": "Android版(FTP)",
-                "url": "ftp://ftp.mozilla.org/pub/mobile/"
+                "name": "Android国际版(FTP)",
+                "url": "https://ftp.mozilla.org/pub/mobile/"
             },
             {
                 "name": "Android国际版(Play)",
@@ -66,10 +66,6 @@
             {
                 "name": "W3C(英文)",
                 "url": "http://www.w3.org/standards/webdesign/script"
-            },
-            {
-                "name": "ECMAScript",
-                "url": "http://www.ecmascript.org/"
             }
         ]
     },
@@ -77,7 +73,7 @@
         "category": "CSS",
         "links": [
             {
-                "name": "MDN(多国语言)",
+                "name": "MDN(Mozilla建设的开发者文档，多国语言界面，英文版文档最新)",
                 "url": "https://developer.mozilla.org/zh-CN/docs/Web/CSS"
             },
             {
@@ -98,7 +94,11 @@
         "category": "扩展开发",
         "links": [
             {
-                "name": "MDN(Add-ons)",
+                "name": "Mozilla Add-ons(简称AMO，附加组件下载及提交官方站)",
+                "url": "https://addons.mozilla.org/"
+            },
+            {
+                "name": "MDN(附加组件)",
                 "url": "https://developer.mozilla.org/zh-CN/docs/Mozilla/add-ons"
             },
             {
@@ -127,28 +127,36 @@
                 "url": "http://bbs.kafan.cn/forum-215-1.html"
             },
             {
-                "name": "火狐社区（谋智官方）",
+                "name": "火狐社区（谋智中国官方社区）",
                 "url": "http://mozilla.com.cn/moz-portal.html"
             },
             {
-                "name": "Firefox中文社区",
+                "name": "Firefox中文社区（用户交流论坛）",
                 "url": "https://www.firefox.net.cn/"
             },
             {
-                "name": "mozest广场（官方翻译）",
+                "name": "mozest广场（现已废弃）",
                 "url": "http://g.mozest.com/"
             },
             {
-                "name": "mozillazine（国外论坛）",
+                "name": "mozillazine (英文，用户交流论坛)",
                 "url": "http://forums.mozillazine.org/"
+            },
+            {
+                "name": "Mozilla Discourse (英文，Mozilla官方交流论坛，正取代邮件列表)",
+                "url": "https://discourse.mozilla-community.org"
             }
         ]
     },
     {
-        "category": "脚本样式",
+        "category": "脚本/样式",
         "links": [
             {
                 "name": "Greasy Fork",
+                "url": "https://greasyfork.org/zh-CN/scripts"
+            },
+            {
+                "name": "Sleazy Fork (Greasy Fork成人分站)",
                 "url": "https://greasyfork.org/zh-CN/scripts"
             },
             {
