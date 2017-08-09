@@ -164,20 +164,8 @@
                 "url": "https://openuserjs.org/"
             },
             {
-                "name": "MonkeyGuts",
-                "url": "https://monkeyguts.com/"
-            },
-            {
-                "name": "myUserJS",
-                "url": "http://myuserjs.org/"
-            },
-            {
-                "name": "Userscripts镜像1",
+                "name": "Userscripts镜像",
                 "url": "http://userscripts-mirror.org/"
-            },
-            {
-                "name": "Userscripts镜像2",
-                "url": "http://www.webextender.net/"
             },
             {
                 "name": "userstyles",
