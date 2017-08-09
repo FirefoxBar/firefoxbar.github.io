@@ -31,7 +31,13 @@
 					var linkList = i.links;
 					var linkHTML = "";
 					linkList.forEach(function(j) {
-						linkHTML = linkHTML + ("<li><a href='" + j.url + "' target='_blank'>" + j.name + "</a></li>");
+						linkHTML += "<li><a href='" + j.url + "' target='_blank'>";
+						if (j.abandoned) {
+							linkHTML += "<s>" + j.name + "</s>";
+						} else {
+							linkHTML += j.name;
+						}
+						linkHTML += "</a></li>");
 					});
 					linkHTML = "<ul>" + linkHTML + "</ul></section>";
 					html += cate + linkHTML;

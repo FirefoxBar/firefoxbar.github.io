@@ -4,15 +4,16 @@
         "links": [
             {
                 "name": "国际官方FTP",
-                "url": "https://ftp.mozilla.org/pub/firefox/"
+                "url": "https://archive.mozilla.org/pub/firefox/"
             },
             {
                 "name": "国际版(所有语言版本)",
                 "url": "https://www.mozilla.org/en-US/firefox/all/"
             },
             {
-                "name": "开发者版(已终止)",
-                "url": "https://www.mozilla.org/en-US/firefox/channel/#aurora"
+                "name": "开发者版",
+                "url": "https://www.mozilla.org/en-US/firefox/channel/#aurora",
+				"abandoned": 1
             },
             {
                 "name": "Nightly(每夜)版",
@@ -24,14 +25,14 @@
             },
             {
                 "name": "Android国际版(FTP)",
-                "url": "https://ftp.mozilla.org/pub/mobile/"
+                "url": "https://archive.mozilla.org/pub/mobile/"
             },
             {
                 "name": "Android国际版(Play)",
                 "url": "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
             },
             {
-                "name": "Android谋智版",
+                "name": "Android谋智版(官方)",
                 "url": "http://www.firefox.com.cn/#mobile"
             },
             {
@@ -48,7 +49,7 @@
         "category": "JavaScript",
         "links": [
             {
-                "name": "MDN(多国语言)",
+                "name": "MDN(Mozilla建设，多国语言)",
                 "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
             },
             {
@@ -73,7 +74,7 @@
         "category": "CSS",
         "links": [
             {
-                "name": "MDN(Mozilla建设的开发者文档，多国语言界面，英文版文档最新)",
+                "name": "MDN(Mozilla建设，多国语言)",
                 "url": "https://developer.mozilla.org/zh-CN/docs/Web/CSS"
             },
             {
@@ -94,8 +95,12 @@
         "category": "扩展开发",
         "links": [
             {
-                "name": "Mozilla Add-ons(简称AMO，附加组件下载及提交官方站)",
+                "name": "Mozilla Add-ons(AMO，附加组件下载及提交)",
                 "url": "https://addons.mozilla.org/"
+            },
+            {
+                "name": "WebExtension MDN",
+                "url": "https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions"
             },
             {
                 "name": "MDN(附加组件)",
@@ -103,11 +108,13 @@
             },
             {
                 "name": "MDN(XUL)",
-                "url": "https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/xul"
+                "url": "https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/xul",
+				"abandoned": 1
             },
             {
                 "name": "MDN(XPCOM)",
-                "url": "https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM"
+                "url": "https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM",
+				"abandoned": 1
             }
         ]
     },
@@ -131,16 +138,17 @@
                 "url": "https://www.firefox.net.cn/"
             },
             {
-                "name": "mozest广场（现已废弃）",
-                "url": "http://g.mozest.com/"
-            },
-            {
                 "name": "mozillazine (英文，用户交流论坛)",
                 "url": "http://forums.mozillazine.org/"
             },
             {
-                "name": "Mozilla Discourse (英文，Mozilla官方交流论坛，正取代邮件列表)",
+                "name": "Mozilla Discourse (英文，Mozilla官方交流论坛)",
                 "url": "https://discourse.mozilla-community.org"
+            },
+            {
+                "name": "mozest广场",
+                "url": "http://g.mozest.com/",
+				"abandoned": 1
             }
         ]
     },
