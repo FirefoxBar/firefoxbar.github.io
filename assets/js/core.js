@@ -105,6 +105,11 @@
 				for (var i = 0,
 				l = scripts.length; i < l; i++) addScript(scripts[i]);
 				document.title = dom.querySelector("title").textContent;
+				if (navigator.doNotTrack != 1) {
+					var hm = document.createElement("script");
+					hm.src = "https://hm.baidu.com/hm.js?eddab75c23e1853a476011bb95a585c9";
+					document.getElementsByTagName('body')[0].appendChild(hm);
+				}
 			},
 			onerror: function() {
 				fxb.loading(false);
@@ -116,10 +121,12 @@
 	fxb.init = function() {
 		fxb.load();
 		window.addEventListener("hashchange", fxb.load);
+		window._hmt = window._hmt || [];
 		fxb.link();
 		fxb.menu();
 	};
 
 	window.fxb = fxb;
 	fxb.init();
+
 })();

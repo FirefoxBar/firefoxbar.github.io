@@ -25,6 +25,5 @@ gulp.task('minjs', function() {
 		'assets/js/core.js'
 	])
     .pipe(uglify())
-	.pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('assets/vendor/js'));
 });
