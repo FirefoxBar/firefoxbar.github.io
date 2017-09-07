@@ -115,10 +115,6 @@
 	};
 
 	fxb.init = function() {
-		fxb.load();
-		window.addEventListener("hashchange", fxb.load);
-		fxb.link();
-		fxb.menu();
 		window._hmt = window._hmt || [];
 		_hmt.push(['_setAutoPageview', false]);
 		if (navigator.doNotTrack != 1) {
@@ -126,6 +122,10 @@
 			hm.src = "https://hm.baidu.com/hm.js?eddab75c23e1853a476011bb95a585c9";
 			document.head.appendChild(hm);
 		}
+		fxb.load();
+		window.addEventListener("hashchange", fxb.load);
+		fxb.link();
+		fxb.menu();
 	};
 
 	window.fxb = fxb;
