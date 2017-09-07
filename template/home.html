@@ -17,15 +17,12 @@
 				html = html + ("<li><img src='" + i.avatar + "'><p><a href='" + i.url + "' target='_blank'>" + i.name + "</a></p></li>");
 			});
 			list.innerHTML = "<ul>" + html + "</ul>";
+            Array.prototype.forEach.call(list.querySelectorAll("a"), function(i){
+                i.addEventListener("click", function() {
+					_hmt.push(['_trackEvent', 'people', 'view', this.innerHTML]);
+				}, false);
+            });
 		});
-		if ("undefined" === typeof DUOSHUO) {
-			var ds = document.createElement('script');
-			ds.async = true;
-			ds.src = '//static.duoshuo.com/embed.js';
-			ds.charset = 'UTF-8';
-			return document.head.appendChild(ds);
-		}
-		DUOSHUO.EmbedThread(document.querySelector(".ds-thread"));
     })();
   </script>
 </head>

@@ -44,17 +44,20 @@
 			userscripts.forEach(function(i) {
 				html += "<tr>" + "<td class='install-btns'><a title='安装' class='installer button' href='" +
                 i.installURL + "'><i class='iconfont icon-install'></i></a><a title='查看源代码' class='view-source button'><i class='iconfont icon-source'></i></a><a title='下载' class='download button'><i class='iconfont icon-download'></i></a></td>" + 
-                "<td><a href='" + i.homepageURL + "' target='_blank'>" +
+                "<td><a href='" + i.homepageURL + "' target='_blank' class='name'>" +
                 i.name + "</a></td>" + "<td>" + i.version + "</td>" + "<td>" + i.description + "</td>" + "</tr>";
 			});
 			list.innerHTML = html;
-            var vs = document.querySelectorAll("a.view-source");
-            Array.prototype.forEach.call(vs,function(i){
-                i.addEventListener("click",getSource,false);
+            Array.prototype.forEach.call(list.querySelectorAll("a.view-source"), function(i){
+                i.addEventListener("click", getSource, false);
             });
-            var dl = document.querySelectorAll("a.download");
-            Array.prototype.forEach.call(dl,function(i){
-                i.addEventListener("click",download,false);
+            Array.prototype.forEach.call(list.querySelectorAll("a.download"), function(i){
+                i.addEventListener("click", download, false);
+            });
+            Array.prototype.forEach.call(list.querySelectorAll("a.installer"), function(i){
+                i.addEventListener("click", function() {
+					_hmt.push(['_trackEvent', 'userscript', 'install', this.parentElement.parentElement.querySelector('.name').innerHTML]);
+				}, false);
             });
         });
         cps.addEventListener("click",function(){
@@ -64,6 +67,7 @@
         },false);
         
         function getSource(){
+			_hmt.push(['_trackEvent', 'userscript', 'viewsource', this.parentElement.parentElement.querySelector('.name').innerHTML]);
             fxb.loading(true);
             var path = this.previousSibling.href.slice(52);
             setTimeout(function(){
@@ -81,6 +85,7 @@
         
         function download(e){
 			var _this = this;
+			_hmt.push(['_trackEvent', 'userscript', 'download', this.parentElement.parentElement.querySelector('.name').innerHTML]);
             if (_this.getAttribute("download")) return;
             fxb.loading(true);
             var path = _this.previousSibling.previousSibling.href.slice(52);

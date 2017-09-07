@@ -3,7 +3,14 @@
 <head>
 	<title>附加组件 - Firefox 吧项目组</title>
 	<meta charset="utf-8">
-	<script class="redirect">location.replace('/#addons');</script>
+	<script class="redirect">
+	location.replace('/#addons');
+	Array.prototype.forEach.call(document.querySelectorAll(".add-on-list a"), function(i){
+		i.addEventListener("click", function() {
+			_hmt.push(['_trackEvent', 'addon', 'view', this.querySelector('.name').innerHTML]);
+		}, false);
+	});
+	</script>
 </head>
 <body>
 	<div>
@@ -11,17 +18,17 @@
 		<p>附加组件可以增添或改变你使用浏览器或应用程序的功能或方式。</p>
 		<div class="us-list add-on-list">
 			<ul>
-				<li><a href="https://addons.mozilla.org/zh-Cn/firefox/addon/fire-ie/" target="_blank"><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/372/372869-64.png">解雇IE(FireIE,增强版IE) </a>
+				<li><a href="https://addons.mozilla.org/zh-Cn/firefox/addon/fire-ie/" target="_blank"><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/372/372869-64.png"><span class="name">解雇IE(FireIE,增强版IE)</span></a>
 				<p>让火狐兼容IE的双核扩展，一键切换至IE内核，网银支付无忧愁。支持Adblock plus和FireGestures，在IE中使用鼠标手势和屏蔽广告。</p></li>
-				<li><a href="https://addons.mozilla.org/zh-Cn/firefox/addon/flash-gestures/" target="_blank"><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/572/572292-64.png">Flash Gestures</a>
+				<li><a href="https://addons.mozilla.org/zh-Cn/firefox/addon/flash-gestures/" target="_blank"><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/572/572292-64.png"><span class="name">Flash Gestures</span></a>
 				<p>在 Flash 播放器等插件上使用您喜爱的鼠标手势扩展和 Firefox 快捷键。</p></li>
-				<li><a href="https://addons.mozilla.org/zh-Cn/firefox/addon/%E9%A9%AC%E7%94%B2%E5%88%87%E6%8D%A2%E5%B7%A5%E5%85%B7/" target="_blank"><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/576/576138-64.png">马甲切换工具 </a>
+				<li><a href="https://addons.mozilla.org/zh-Cn/firefox/addon/%E9%A9%AC%E7%94%B2%E5%88%87%E6%8D%A2%E5%B7%A5%E5%85%B7/" target="_blank"><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/576/576138-64.png">马甲切换工具</span></a>
 				<p>一个方便快捷的马甲切换工具，火狐吧出品，你值得拥有。有问题，上狐吧</p></li>
-				<li><a href="https://addons.mozilla.org/zh-Cn/firefox/addon/网盘离线下载" target="_blank"><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/583/583336-64.png">网盘离线下载 </a>
+				<li><a href="https://addons.mozilla.org/zh-Cn/firefox/addon/网盘离线下载" target="_blank"><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/583/583336-64.png"><span class="name">网盘离线下载</span></a>
 				<p>火狐吧出品，百度云,115右键离线下载http,ftp,ed2k，磁链，方便快捷</p></li>
-				<li><a href="https://github.com/FirefoxBar/xStyle" target="_blank"><img src="https://raw.githubusercontent.com/FirefoxBar/xStyle/master/images/128.png">xStyle</a>
+				<li><a href="https://github.com/FirefoxBar/xStyle" target="_blank"><img src="https://raw.githubusercontent.com/FirefoxBar/xStyle/master/images/128.png"><span class="name">xStyle</span></a>
 				<p>类似Stylish的样式管理工具，兼容Firefox 57+</p></li>
-				<li><a href="https://github.com/FirefoxBar/HeaderEditor" target="_blank"><img src="https://raw.githubusercontent.com/FirefoxBar/HeaderEditor/master/images/128.png">Header Editor </a>
+				<li><a href="https://github.com/FirefoxBar/HeaderEditor" target="_blank"><img src="https://raw.githubusercontent.com/FirefoxBar/HeaderEditor/master/images/128.png"><span class="name">Header Editor</span></a>
 				<p>用于编辑请求头和响应头的工具，兼容Firefox 57+</p></li>
 			</ul>
 		</div>
