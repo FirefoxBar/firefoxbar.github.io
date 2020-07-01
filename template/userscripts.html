@@ -36,7 +36,7 @@
         var cps = document.querySelector("#collapsing");
         
         fxb.loading(true);
-		fxb.ajax('https://raw.githubusercontent.com/FirefoxBar/userscript/master/userscripts.json',
+		fxb.ajax('https://userscript.firefoxcn.net/api/list.json',
 		function(e) {
             fxb.loading(false);
             var userscripts = JSON.parse(this.responseText);
