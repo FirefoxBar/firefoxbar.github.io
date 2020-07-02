@@ -10,10 +10,17 @@
 		this.page.identifier = 'home';
 	};
 	function loadDisqus() {
-		var s = document.createElement('script');
-		s.src = 'https://firefoxbar.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		document.body.appendChild(s);
+		if (typeof DISQUS !== 'undefined') {
+			DISQUS.reset({
+				reload: true,
+				config: disqus_config
+			});
+		} else {
+			var s = document.createElement('script');
+			s.src = 'https://firefoxbar.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			document.body.appendChild(s);
+		}
 	}
 	(function() {
 		if (typeof fxb === "undefined") return;
