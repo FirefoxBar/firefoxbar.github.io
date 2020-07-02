@@ -98,7 +98,7 @@
                 evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, 
                 false, false, false, false, 0, null);
                 evt.initEvent("click", false, false);
-                _this.download = path.slice(path.indexOf("/") + 1);
+                _this.download = url.slice(url.indexOf("/") + 1);
                 _this.href = URL.createObjectURL(blob);
                 _this.dispatchEvent(evt);
             });      
