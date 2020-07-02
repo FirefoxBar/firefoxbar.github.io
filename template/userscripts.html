@@ -95,13 +95,12 @@
                 var sourceCode = this.responseText;
                 var blob = new Blob([sourceCode]);
                 var evt = document.createEvent("MouseEvents");
-                evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, 
-                false, false, false, false, 0, null);
+                evt.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
                 evt.initEvent("click", false, false);
                 _this.download = url.slice(url.indexOf("/") + 1);
                 _this.href = URL.createObjectURL(blob);
                 _this.dispatchEvent(evt);
-            });      
+            });
         }
 	})();
   </script>

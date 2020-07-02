@@ -5,25 +5,33 @@
 	<meta charset="utf-8" />
 	<script class="redirect">location.replace('/#home');</script>
 	<script class="exec">
-	var duoshuoQuery = { short_name: "firefoxbar" };
+	var disqus_config = function () {
+		this.page.url = window.location.href;
+		this.page.identifier = 'home';
+	};
 	(function() {
 		if (typeof fxb === "undefined") return;
 		var list = document.querySelector(".menber-list");
-		fxb.ajax('/template/json/people.json',
-		function(e) {
+		fxb.ajax('/template/json/people.json', function(e) {
 			var rt = JSON.parse(this.responseText);
 			var html = "";
 			rt.forEach(function(i) {
 				html = html + ("<li><img src='" + i.avatar + "'><p><a href='" + i.url + "' target='_blank'>" + i.name + "</a></p></li>");
 			});
 			list.innerHTML = "<ul>" + html + "</ul>";
-            Array.prototype.forEach.call(list.querySelectorAll("a"), function(i){
-                i.addEventListener("click", function() {
+			Array.prototype.forEach.call(list.querySelectorAll("a"), function(i) {
+				i.addEventListener("click", function() {
 					_hmt.push(['_trackEvent', 'people', 'view', this.innerHTML]);
 				}, false);
-            });
+			});
 		});
-    })();
+		document.addEventListener('DOMContentLoaded', function() {
+			var s = document.createElement('script');
+			s.src = 'https://firefoxbar.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			document.body.appendChild(s);
+		});
+  })();
   </script>
 </head>
 <body>
@@ -43,7 +51,7 @@
 	</div>
 	<div id="ridicule">
 		<h2>我要吐槽（╯‵□′）╯︵┴─┴ </h2>
-		<div class="ds-thread" data-thread-key="home" data-title="Firefox 吧项目组" data-url="http://firefoxbar.github.io"></div>
+		<div id="disqus_thread"></div>
 	</div>
 </body>
 </html>
