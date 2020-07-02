@@ -68,10 +68,10 @@
         
         function getSource(){
 			_hmt.push(['_trackEvent', 'userscript', 'viewsource', this.parentElement.parentElement.querySelector('.name').innerHTML]);
+            var url = this.parentElement.parentElement.querySelector('.installer').href;
             fxb.loading(true);
-            var path = this.previousSibling.href.slice(52);
             setTimeout(function(){
-                fxb.ajax("https://raw.githubusercontent.com/FirefoxBar/userscript/master/" + path + "?_r=" + Math.random(),
+                fxb.ajax(url + "?_r=" + Math.random(),
                 function() {
                     fxb.loading(false);
                     var sourceCode = this.responseText;
@@ -87,9 +87,9 @@
 			var _this = this;
 			_hmt.push(['_trackEvent', 'userscript', 'download', this.parentElement.parentElement.querySelector('.name').innerHTML]);
             if (_this.getAttribute("download")) return;
+            var url = this.parentElement.parentElement.querySelector('.installer').href;
             fxb.loading(true);
-            var path = _this.previousSibling.previousSibling.href.slice(52);
-            fxb.ajax("https://raw.githubusercontent.com/FirefoxBar/userscript/master/" + path + "?_r=" + Math.random(),
+            fxb.ajax(url + "?_r=" + Math.random(),
             function() {
                 fxb.loading(false);
                 var sourceCode = this.responseText;
