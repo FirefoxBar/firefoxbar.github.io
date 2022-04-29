@@ -276,7 +276,7 @@ a {
 }
 
 .item-list table tr:nth-child(2n+1), .us-list table tr:nth-child(2n+1) {
-	background-color: #EEE;
+	background-color: #f5f5f5;
 }
 
 .item-list tr td:nth-child(1) {
