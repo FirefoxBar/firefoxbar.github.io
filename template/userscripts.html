@@ -65,6 +65,7 @@
             fxb.loading(false);
             var userscripts = JSON.parse(this.responseText);
 			var html = "";
+            userscripts = userscripts.sort((a, b) => b.lastUpdate - a.lastUpdate);
 			userscripts.forEach(function(i) {
 				html += "<tr>" + "<td class='install-btns'><a title='安装' class='installer button' href='" +
                 i.installURL + "'><i class='iconfont icon-install'></i></a><a title='查看源代码' class='view-source button'><i class='iconfont icon-source'></i></a><a title='下载' class='download button'><i class='iconfont icon-download'></i></a></td>" + 
@@ -138,7 +139,10 @@
 		<p>在 Firefox 平台上，可以通过 <a href="https://addons.mozilla.org/zh-cn/firefox/addon/greasemonkey/" target="_blank">GreaseMonkey</a>、<a href="https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/" target="_blank">TamperMonkey</a>、<a href="https://addons.mozilla.org/zh-CN/firefox/addon/violentmonkey/" target="_blank">Violentmonkey</a>、<a href="https://addons.mozilla.org/zh-CN/firefox/addon/scriptish/" target="_blank">Scriptish</a> 等扩展使用和管理用户脚本。</p>
 		<p><a href="https://github.com/FirefoxBar/userscript/issues/new/choose" target="_blank">报告脚本问题</a></p>
 		<div class="us-list">
-			<table><tbody></tbody></table>
+			<table>
+                <thead><tr><th></th><th>脚本</th><th>版本</th><th>上次更新</th><th>描述</th></tr></thead>
+                <tbody></tbody>
+            </table>
 		</div>
         <div id="view-source"><pre class="line-numbers"><code class="language-javascript"></code></pre>
         </div>

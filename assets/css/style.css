@@ -267,10 +267,6 @@ a {
 	margin: 20px 0;
 }
 
-.item-list table th, .us-list table th {
-	text-align: center;
-}
-
 .item-list table td, .us-list table td {
 	padding: 5px 2px 5px;
 }
