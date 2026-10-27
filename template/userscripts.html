@@ -34,6 +34,30 @@
         var source = code.querySelector("code");
 		var list = document.querySelector(".us-list table tbody");
         var cps = document.querySelector("#collapsing");
+
+        function formatTime(t) {
+            var offset = Math.round(Date.now() / 1000 - t);
+            if (offset < 60) {
+            return String(offset) + ' 秒前';
+            }
+            if (offset < 3600) {
+            return Math.ceil(offset / 60) + ' 分钟前';
+            }
+            var d = new Date(t * 1000);
+            var now = new Date();
+            var result = [];
+            if (d.getFullYear() !== now.getFullYear()) {
+                result.push(d.getFullYear() + ' 年');
+            }
+            if (d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth() && d.getDate() === now.getDate()) {
+                result.push('今天');
+            } else {
+                result.push(String(d.getMonth() + 1) + ' 月');
+                result.push(String(d.getDate()) + ' 日');
+            }
+            result.push(d.getHours() + ':' + d.getMinutes());
+            return result.join(' ');
+        }
         
         fxb.loading(true);
 		fxb.ajax('https://userscript.firefoxcn.net/api/list.json',
@@ -45,7 +69,9 @@
 				html += "<tr>" + "<td class='install-btns'><a title='安装' class='installer button' href='" +
                 i.installURL + "'><i class='iconfont icon-install'></i></a><a title='查看源代码' class='view-source button'><i class='iconfont icon-source'></i></a><a title='下载' class='download button'><i class='iconfont icon-download'></i></a></td>" + 
                 "<td><a href='" + i.homepageURL + "' target='_blank' class='name'>" +
-                i.name + "</a></td>" + "<td>" + i.version + "</td>" + "<td>" + i.description + "</td>" + "</tr>";
+                i.name + "</a></td>" + "<td>" + i.version + "</td><td>更新于 " +
+                formatTime(i.lastUpdate) + "</td><td>" +
+                i.description + "</td>" + "</tr>";
 			});
 			list.innerHTML = html;
             Array.prototype.forEach.call(list.querySelectorAll("a.view-source"), function(i){
