@@ -38,11 +38,11 @@
         function formatTime(t) {
             var target = dayjs.unix(t);
             var now = dayjs();
-            var secDiff = now.diff(target, 'second') <= 60;
+            var secDiff = now.diff(target, 'second');
             if (secDiff < 60) {
                 return String(secDiff) + ' 秒前';
             }
-            var minDiff = now.diff(target, 'minute') <= 60;
+            var minDiff = now.diff(target, 'minute');
             if (minDiff < 60) {
                 return Math.ceil(minDiff) + ' 分钟前';
             }
