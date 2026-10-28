@@ -55,7 +55,7 @@
             } else if (target.isSame(now.subtract(1, 'day'), 'day')) {
                 result.push('昨天');
             } else {
-                result.push(target.format('MM 月 DD 日'));
+                result.push(target.format('M 月 D 日'));
             }
             result.push(target.format('HH:mm'));
             return result.join(' ');
