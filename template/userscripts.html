@@ -36,26 +36,28 @@
         var cps = document.querySelector("#collapsing");
 
         function formatTime(t) {
-            var offset = Math.round(Date.now() / 1000 - t);
-            if (offset < 60) {
-            return String(offset) + ' 秒前';
+            var target = dayjs.unix(t);
+            var now = dayjs();
+            var secDiff = now.diff(target, 'second') <= 60;
+            if (secDiff < 60) {
+                return String(secDiff) + ' 秒前';
             }
-            if (offset < 3600) {
-            return Math.ceil(offset / 60) + ' 分钟前';
+            var minDiff = now.diff(target, 'minute') <= 60;
+            if (minDiff < 60) {
+                return Math.ceil(minDiff) + ' 分钟前';
             }
-            var d = new Date(t * 1000);
-            var now = new Date();
             var result = [];
-            if (d.getFullYear() !== now.getFullYear()) {
-                result.push(d.getFullYear() + ' 年');
+            if (target.year() !== now.year()) {
+                result.push(d.year() + ' 年');
             }
-            if (d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth() && d.getDate() === now.getDate()) {
+            if (target.isSame(now, 'day')) {
                 result.push('今天');
+            } else if (target.isSame(now.subtract(1, 'day'), 'day')) {
+                result.push('昨天');
             } else {
-                result.push(String(d.getMonth() + 1) + ' 月');
-                result.push(String(d.getDate()) + ' 日');
+                result.push(target.format('MM 月 DD 日'));
             }
-            result.push(d.getHours() + ':' + d.getMinutes());
+            result.push(target.format('HH:mm'));
             return result.join(' ');
         }
         
